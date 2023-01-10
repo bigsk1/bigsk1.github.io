@@ -6,16 +6,4 @@ tages: [news,projects,docs]    # Tage should always be in lowercase
 ---
 
 # Welcome
-
-Hello and welcome to my first attempt and coding and building a site
-
-
-```javascript
-console.log(`hello world`);
-```
-
-```yml
-name: `push remote`
-```
-
-
+---
