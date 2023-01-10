@@ -14,41 +14,41 @@ lang: en
 
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone:
+timezone: America/Los_Angles
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy                          # the main title
+title: TKS                          # the main title
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+tagline: A Doc site for projects   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+  A Doc site for different projects 
 
-# fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
+# fill in the protocol & hostname for your site, e.g., 'https://bigsk1.github.io'
 url: ''
 
 github:
-  username: github_username             # change to your github username
+  username: bigsk1             # change to your github username
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: kratomsyndicate            # change to your twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com             # change to your email address
+  name: TKS
+  email: sales@thekratomsyndicate.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
+    - https://twitter.com/kratomsyndicate      # change to your twitter homepage
+    - https://github.com/bigsk1       # change to your github homepage
     # Uncomment below to add more social links
-    # - https://www.facebook.com/username
+    - https://www.facebook.com/kratomsyndicate
     # - https://www.linkedin.com/in/username
 
-google_site_verification:               # fill in to your verification string
+# google_site_verification:               # fill in to your verification string
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
@@ -81,7 +81,7 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: https://pbs.twimg.com/profile_images/1490549334697340930/0KmD2xRl_400x400.jpg
 
 # boolean type, the global switch for ToC in posts.
 toc: true
