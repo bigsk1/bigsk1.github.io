@@ -1,7 +1,7 @@
 ---
 title: How a VPN works
 date: 2023-01-10 12:00:00  -500
-categories: [docs,privacy]
+categories: [privacy]
 tags: [privacy,docs]    # Tags should always be in lowercase
 ---
 

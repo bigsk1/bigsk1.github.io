@@ -9,7 +9,11 @@
 -
   type: email
   icon: 'fas fa-envelope'
-  noblank: true            # open link in current tab
+  noblank: false            # open link in current tab
+-
+  type: link
+  icon: 'fas fa-link'
+  noblank: true           
 -
   type: rss
   icon: 'fas fa-rss'

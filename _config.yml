@@ -24,7 +24,7 @@ title: TKS Github Docs                      # the main title
 tagline: A Doc site for projects   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A Doc site for different projects 
+  Doc site for different projects 
 
 # fill in the protocol & hostname for your site, e.g., 'https://bigsk1.github.io'
 url: 'https://bigsk1.github.io'
@@ -47,6 +47,7 @@ social:
     # Uncomment below to add more social links
     - https://www.facebook.com/kratomsyndicate
     # - https://www.linkedin.com/in/username
+    - https://thekratomsyndicate.com/
 
 # google_site_verification:               # fill in to your verification string
 
