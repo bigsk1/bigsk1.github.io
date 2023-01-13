@@ -25,6 +25,6 @@
 #   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
 #   url:  ''                  # Fill with your Linkedin homepage
 # -
-   type: link
-   icon: 'fab fa-link'
-   url:  'https://thekratomsyndicate.com/'          # Fill with your homepage
+#   type: link
+#   icon: 'fab fa-link'
+#   url:  'https://thekratomsyndicate.com/'          # Fill with your homepage
