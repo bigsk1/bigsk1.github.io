@@ -9,10 +9,10 @@ tags: [privacy,docs]    # Tags should always be in lowercase
 
 A Virtual Private Network (VPN) is a technology that allows you to create a secure connection to another network over the internet. It works by creating an encrypted "tunnel" between your device and the VPN server, which protects your data and online activities from being intercepted by hackers or other malicious actors.
 
+![ChatGPT Model Diagram](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMsIfmBcddl-EVmzeu_pMG28dIKqnNwuTYOxksJPgvjI_FYbNRr4OuZGfyXVwxuw3VnaY&usqp=CAU)
 <p align="center">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMsIfmBcddl-EVmzeu_pMG28dIKqnNwuTYOxksJPgvjI_FYbNRr4OuZGfyXVwxuw3VnaY&usqp=CAU" alt="VPN Logo">
+  <em>VPN logo</em>
 </p>
-
 
 ## How does a VPN work?
 
