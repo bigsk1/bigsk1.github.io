@@ -1,5 +1,5 @@
 ---
-title: Welcome
+title: What is Bitcoin?
 date: 2023-01-10 12:00:00  -500
 categories: [docs,bitcoin]
 tags: [docs,bitcoin,crypto]    # Tags should always be in lowercase
@@ -14,7 +14,9 @@ When someone wants to send some bitcoin to someone else, they broadcast a messag
 Once the computers in the network approve the transaction, it gets added to a big public list of all the transactions that have ever happened with bitcoin, called the blockchain. And that's how the bitcoin gets moved from one person to another.
 
 And the special thing about bitcoin is that it is created through a process called mining, in which powerful computers use complex algorithms to solve complex mathematical puzzles to validate the transactions on the network, and for each block of transactions they validate, they get rewarded with a certain amount of bitcoins. The reward they get comes from the small fees that are paid when a bitcoin transaction is sent. 
-<br></br> 
+
+<br>
+
 ### Bitcoin transaction 
 
 Converting cash to bitcoin and back. After receiving Products and Goods some or all bitcoin can be held in a bitcoin wallet or it can be immediately sent back to cash.  
@@ -37,7 +39,9 @@ To send bitcoin, you will need to open your wallet and enter the bitcoin address
 Keep in mind that the transactions on the bitcoin network are irreversible, so it is important to double check the address and the amount before confirming the transaction. And also the transaction may take some minutes to be confirmed by the network. 
 
 If looking for a bitcoin wallet we have a great selection over on the TKS help site. Everything from desktop to mobile, easy to complex multi-sig wallets. Check it out [HERE](https://thekratomsyndicate.zendesk.com/hc/en-us/articles/360046853491-Free-Bitcoin-wallets-and-how-to-buy-Bitcoin)
-<br></br>
+
+<br>
+
 
 ![Bitcoin Transaction](https://tinyurl.com/2hkzwarq)
 <p align="center">
@@ -57,7 +61,7 @@ Borderless transactions: Bitcoin transactions are not restricted by geographical
 
 Accessibility: Bitcoin can be used by anyone with an internet connection, regardless of whether they have a bank account or credit history. This can allow merchants to reach new customers and increase their customer base.
 
-<br></br>
+<br>
 
 Downloading and setting up a mobile bitcoin wallet is relatively easy and can typically be done in a few simple steps. Here's an example of the process:
 
@@ -74,7 +78,8 @@ Keep in mind that the seed phrase is the only way to recover your wallet and acc
 Once you have saved your seed phrase, you will be able to use your mobile wallet to send and receive bitcoins, check your balance and transaction history, and more.
 
 Overall, downloading and setting up a mobile bitcoin wallet is a relatively easy process that can typically be completed in just a few minutes. The most important part is to save the seed phrase securely, so you can recover the wallet if needed.
-<br></br>
+
+<br>
 
 Once you have bitcoin in your wallet which could be either on a centralized exchange like Coinbase or a mobile wallet like Muun Wallet or even in a hardware wallet like Ledger you can then be able to purchase goods online with ease. 
 
