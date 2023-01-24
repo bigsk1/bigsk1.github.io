@@ -1,8 +1,8 @@
 ---
 title: What is Bitcoin?
 date: 2023-01-10 12:00:00  -500
-categories: [docs,bitcoin]
-tags: [docs,bitcoin,crypto]    # Tags should always be in lowercase
+categories: [bitcoin,crypto]
+tags: [docs,bitcoin,crypto,blockchain]    # Tags should always be in lowercase
 ---
 
 ## What is Bitcoin?
