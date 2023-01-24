@@ -22,6 +22,7 @@ To build a simple "Hello I did it!" Docker image, you will need to create a Dock
 ```code
 FROM alpine
 CMD ["echo", "Hello I did it!"]
+
 ```
 <br>
 
@@ -36,6 +37,7 @@ Once you have created the Dockerfile, you can build the image using the docker b
 
 ```code
 docker build -t my-hello-image .
+
 ```
 
 <br>
@@ -49,6 +51,7 @@ Once the image is built, you can run it using the docker run command. Here is an
 
 ```code
 docker run my-hello-image
+
 ```
 <br>
 
