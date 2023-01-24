@@ -1,6 +1,6 @@
 ---
-title: Docker - build a simple image
-date: 2023-01-24 12:00:00  -500
+title: Docker build a simple image
+date: 2023-01-23 12:00:00  -500
 categories: [docker]
 tags: [docker,docs]    # Tags should always be in lowercase
 ---
@@ -10,7 +10,7 @@ tags: [docker,docs]    # Tags should always be in lowercase
 
 <br>
 
-The first thing you need is  [docker installed](https://docs.docker.com/engine/) 
+The first thing you need is [docker installed](https://docs.docker.com/engine/) 
 
 
 Creating the Dockerfile
@@ -20,7 +20,6 @@ To build a simple "Hello I did it!" Docker image, you will need to create a Dock
 <br> 
 
 ```code
-
 FROM alpine
 CMD ["echo", "Hello I did it!"]
 ```
@@ -36,7 +35,6 @@ Once you have created the Dockerfile, you can build the image using the docker b
 <br>
 
 ```code
-
 docker build -t my-hello-image .
 ```
 
@@ -50,9 +48,7 @@ Once the image is built, you can run it using the docker run command. Here is an
 <br>
 
 ```code
-
 docker run my-hello-image
-
 ```
 <br>
 
