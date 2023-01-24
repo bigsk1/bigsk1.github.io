@@ -16,7 +16,25 @@ The first thing you need is [docker installed](https://docs.docker.com/engine/)
 
 ### Creating the Dockerfile
 
-To build a simple "Hello I did it!" Docker image, you will need to create a Dockerfile that defines the instructions for building the image. Here is an example Dockerfile that you can use as a starting point:
+To build a simple "Hello I did it!" Docker image, you will need to create a Dockerfile that defines the instructions for building the image. 
+
+The Docker file needs to be just that a file named Dockerfile , all one word and capitol D, in linux it would be :
+
+<br>
+
+```shell
+sudo touch Dockerfile
+```
+<br>
+
+then edit the file 
+
+```shell
+sudo nano Dockerfile
+```
+<br>
+
+Paste the contents in the file and save it. CTL+X then Enter
 
 <br> 
 
