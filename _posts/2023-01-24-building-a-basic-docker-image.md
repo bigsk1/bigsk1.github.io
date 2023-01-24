@@ -12,8 +12,9 @@ tags: [docker,docs]    # Tags should always be in lowercase
 
 The first thing you need is [docker installed](https://docs.docker.com/engine/) 
 
+<br>
 
-Creating the Dockerfile
+### Creating the Dockerfile
 
 To build a simple "Hello I did it!" Docker image, you will need to create a Dockerfile that defines the instructions for building the image. Here is an example Dockerfile that you can use as a starting point:
 
@@ -27,7 +28,10 @@ CMD ["echo", "Hello I did it!"]
 <br>
 
 This Dockerfile uses the alpine image as a base, and runs the command echo "Hello I did it!" when the container is started.
-Building the Image
+
+<br>
+
+### Building the Image
 
 <br>
 
@@ -57,4 +61,48 @@ docker run my-hello-image
 
 This command tells Docker to run the my-hello-image image and output the message "Hello I did it!"
 
-And that's it, you can now use the command docker run my-hello-image to run your newly created image and see the message "Hello I did it!" printed on the screen.
+And that's it, you can now use the command docker run my-hello-image 
+to run your newly created image and see the message:
+
+<br>
+
+```shell
+ "Hello I did it!" 
+ ```
+ printed on the screen.
+
+<br>
+
+If you want to see your image just use
+
+<br>
+
+ ```shell
+ sudo docker images
+ ```
+ <br>
+ and you will be shown that your image was made
+
+ <br>
+
+```shell
+ REPOSITORY             TAG       IMAGE ID       CREATED          SIZE
+my-hello-image         latest    26cdf940f9e6   50 minutes ago   7.04MB
+```
+
+### To remove your image 
+
+<br>
+
+Just use the command rmi and --force , you can also remove the alpine image that was made when building the image the same way.
+
+<br>
+
+```shell
+sudo docker rmi <IMAGE-ID> --force
+```
+
+
+
+
+
