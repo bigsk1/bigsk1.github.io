@@ -65,7 +65,11 @@ docker build -t my-hello-image .
 <br>
 
 This command tells Docker to build an image using the Dockerfile in the current directory (indicated by the . at the end) and tag the image with the name my-hello-image.
-Running the Image
+
+<br>
+
+### Running the Image
+<br>
 
 Once the image is built, you can run it using the docker run command. Here is an example command that you can use to run the image:
 
