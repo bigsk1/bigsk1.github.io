@@ -1,22 +1,22 @@
 ---
 title: Resizing LVM disk on Ubuntu VM
 date: 2023-03-06 12:00:00  -500
-categories: [ubuntu,docs]
+categories: [ubuntu,docs,proxmox]
 tags: [ubuntu,docs,resize,parted,proxmox,resize2fs,lvm]    # Tags should always be in lowercase
 ---
 
-## Resizing LVM storage in an 22.04 Ubuntu VM in Proxmox v7.3
+## Resizing LVM storage in a 22.04 Ubuntu VM in Proxmox v7.3
 
 So after searching the webs I was trying to resize a proxmox ubuntu vm using LVM storage but wasn't able to find the exact solution without piecing together a few different sites and fumbling through the steps. I was getting an error disk was in use following this guide 
-https://kb.vander.host/disk-management/how-to-enlarge-an-ext4-disk-on-an-ubuntu-proxmox-vm/
+<a href='https://kb.vander.host/disk-management/how-to-enlarge-an-ext4-disk-on-an-ubuntu-proxmox-vm/'>how-to-enlarge-an-ext4-disk-on-an-ubuntu-proxmox-vm</a>
 
 
 ### The Issue
 
 
-You can select the VM in proxmox and go to hardware and then select your hard disk then select edit, resize ( can only add additional GB of space and not remove ) once you have your extra GB added you should be gtg right? NOPE. If your like me you don't like to give to much GB space to a VM if you don't know exactly what it will be used for in the long run, using a zfs pool of nvme ssd's is precious resources. You can always add later but not take away very easily. 
+You can select the VM in proxmox and go to hardware and then select your hard disk then select edit, resize ( can only add additional GB of space and not remove ) once you have your extra GB added you should be gtg right? NOPE. If your like me you don't like to give to much GB space to a VM if you don't know exactly what it will be used for in the long run, using a zfs pool of nvme ssd's is precious resources. You can always add later but not take away very easily. First always make a backup before messing around with any system changes. 
 
-Ok so ssh into the Ubuntu VM. In my case was using 22.04 server and was setup on LVM storage using my zfs pool on proxmox. 
+Ok so ssh into the Ubuntu VM. In my case was using Ubuntu 22.04 server and was setup on LVM storage using my zfs pool on proxmox. 
 
 once in the command line change to root user using sudo su
 then the below commands.
@@ -26,7 +26,7 @@ fdisk -l
 ```
 noramlly /dev/sda   will show hard drive space, your drive could be different like /dev/sdb1, ect..
 
-Take note it will show all partions like
+Take note it will show all partitions like
 
 /dev/sda1
 
@@ -51,9 +51,9 @@ blocks) or continue with the current setting?
 Fix/Ignore? F         
 
 ```
-it will then show you the different numbers you can select the partion to resize like 1, 2, 3, or however many partions you have on the disk. You will be able to tell it is normally the larger size. We are only interested in the main partition we added the extra space to.
+it will then show you the different numbers you can select. The partition to resize like 1, 2, 3, or however many partions you have on the disk. You will be able to tell as it is normally the larger size. We are only interested in the main partition we added the extra space to.
 
-We will type resizepart ( select the correct number to resize from above 1,2,3, ect ) mine was 3.
+We will type resizepart ( then select the correct number to resize from above 1,2,3, ect ) mine in this example was 3.
 Then type   100%
 
 ```shell
@@ -80,7 +80,7 @@ df -h
 ```
 
 
-Here is another guide on proxmox forums that had some of the pieces to solve this but the above walk through is what I was able to do. https://forum.proxmox.com/threads/resize-disk-of-ubuntu-19-10-vm-on-proxmox.70352/
+Here is another guide on proxmox forums that had some of the pieces to solve this but the above walk through is what I was able to do to get it to work. <a href='https://forum.proxmox.com/threads/resize-disk-of-ubuntu-19-10-vm-on-proxmox.70352/'>resize-disk-of-ubuntu-19-10-vm-on-proxmox.70352</a>
 
 
 
