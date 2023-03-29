@@ -80,7 +80,7 @@ df -h
 ```
 
 
-Here is another guide on proxmox forums that had some of the pieces to solve this but the above walk through is what I was able to do to get it to work. <a href='https://forum.proxmox.com/threads/resize-disk-of-ubuntu-19-10-vm-on-proxmox.70352/'>resize-disk-of-ubuntu-19-10-vm-on-proxmox.70352</a>
+Here is another guide on Proxmox forums that had some of the pieces to solve this but the above walk through is what I was able to do to get it to work. <a href='https://forum.proxmox.com/threads/resize-disk-of-ubuntu-19-10-vm-on-proxmox.70352/'>resize-disk-of-ubuntu-19-10-vm-on-proxmox.70352</a>
 
 
 
