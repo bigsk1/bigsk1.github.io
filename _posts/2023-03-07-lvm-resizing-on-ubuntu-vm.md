@@ -2,7 +2,7 @@
 title: Resizing LVM disk on Ubuntu VM
 date: 2023-03-06 12:00:00  -500
 categories: [ubuntu,docs,proxmox]
-tags: [ubuntu,docs,resize,parted,proxmox,resize2fs,lvm]    # Tags should always be in lowercase
+tags: [ubuntu,docs,resize,parted,proxmox,resize2fs,lvm]    # Tag should always be in lowercase
 ---
 
 ## Resizing LVM storage in a 22.04 Ubuntu VM in Proxmox v7.3
