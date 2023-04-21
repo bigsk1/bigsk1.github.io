@@ -42,12 +42,12 @@ social:
   # email:              # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/kratomsyndicate      # change to your twitter homepage
+    - https://links.thekratomsyndicate.com/      # change to your homepage
     - https://github.com/bigsk1       # change to your github homepage
     # Uncomment below to add more social links
     - https://www.facebook.com/kratomsyndicate
     # - https://www.linkedin.com/in/username
-    - https://links.thekratomsyndicate.com/
+    - https://twitter.com/kratomsyndicate
 
 # google_site_verification:               # fill in to your verification string
 
