@@ -10,11 +10,8 @@ tags: [ubuntu,docs,chatgpt,app,flask,react,ai]    # Tag should always be in lowe
 
 In this article, we'll explore how we built a chatbot using OpenAI's GPT model, Flask, and React. We'll look at the advantages of using GPT for chat applications and discuss how the chatbot can be implemented.
 
-<div align="center">
+![Image](/assets/images/tks-gpt.png)
 
-[![TKS Chat Bot Video](https://img.youtube.com/vi/vUt99nVEUGM/0.jpg)](https://www.youtube.com/watch?v=vUt99nVEUGM)
-
-</div>
 
 ## Introduction to TKS-GPT Chat Bot and its Advantages
 
@@ -26,7 +23,6 @@ Some advantages of using GPT for chat applications include:
 - **Context-awareness**: GPT can maintain context across multiple turns in a conversation, allowing it to generate more relevant and coherent responses.
 - **Flexible use cases**: GPT can be used for a variety of applications, such as answering questions, generating text, summarizing content, and more.
 
-</br>
 
 ## Building the Chatbot
 
@@ -44,7 +40,6 @@ We built a chatbot using GPT, Flask, and React. Here's an overview of the compon
 3. **Handling user input**: We implemented logic to handle user input, such as sending messages by pressing "Enter" and preventing rapid-fire requests by disabling the "Send" button while a request is being processed.
 4. **Communicating with the Flask server**: We used Axios to make API requests to the Flask server, sending the user's message and receiving the GPT-generated response.
 
-</br>
 
 
 ### Deployment and Security Considerations
