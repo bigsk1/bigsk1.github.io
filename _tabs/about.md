@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-# About TKS DIY Enthusiasts Hub
+# TKS DIY Enthusiasts Hub
 
 ## The Home for Creative Tinkerers and Tech-Savvy DIYers
 
