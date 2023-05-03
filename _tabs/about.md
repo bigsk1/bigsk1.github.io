@@ -23,7 +23,5 @@ As we grow and evolve, we're constantly on the lookout for new projects and idea
 
 Thank you for visiting DIY Enthusiasts Hub!
 
-We also run an online site [TKS Kratom](https://thekratomsyndicate.com/)
- were we sell kratom powders and extracts. 
 
 
