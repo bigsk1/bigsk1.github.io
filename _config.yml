@@ -91,16 +91,16 @@ comments:
   active: giscus       # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
   disqus:
-    shortname: bigsk1   # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+    shortname:    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
-    repo: bigsk1/bigsk1.github.io        # <gh-username>/<repo>
+    repo:         # <gh-username>/<repo>
     issue_term:   # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
     repo: bigsk1/bigsk1.github.io          # <gh-username>/<repo>
     repo_id: R_kgDOIwBa0g
-    category: General
+    category: Discus Bot for bigsk1.github.io
     category_id: DIC_kwDOIwBa0s4CWN7Z
     mapping:           # optional, default to 'pathname'
     input_position:    # optional, default to 'bottom'
