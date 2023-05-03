@@ -101,7 +101,7 @@ comments:
     repo: bigsk1/bigsk1.github.io          # <gh-username>/<repo>
     repo_id: R_kgDOIwBa0g
     category: Discus Bot for bigsk1.github.io
-    category_id: DIC_kwDOIwBa0s4CWN7Z
+    category_id: DIC_kwDOIwBa0s4CWN9o
     mapping:           # optional, default to 'pathname'
     input_position:    # optional, default to 'bottom'
     lang:              # optional, default to the value of `site.lang`
