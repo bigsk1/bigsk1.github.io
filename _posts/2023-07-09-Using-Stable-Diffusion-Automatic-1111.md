@@ -1,7 +1,7 @@
 ---
 title: How to Install Stable Diffusion for Windows 10/11
 date: 2023-07-09 12:00:00  -500
-categories: [ai,docs,stable-diffusion]
+categories: [ai,docs,stablediffusion]
 tags: [docs,ai,stable-diffusion,art,images]    # Tag should always be in lowercase
 ---
 
