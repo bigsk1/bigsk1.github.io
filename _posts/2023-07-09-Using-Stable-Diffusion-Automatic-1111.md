@@ -9,14 +9,14 @@ tags: [docs,ai,stable-diffusion,art,images]    # Tag should always be in lowerca
 
 Automatic 1111 stable Diffusion webui is a great way to get started and run it on your own hardware. You should have a decent GPU, AMD or better yet a Nividia RTX 2080 or newer. 
 
-You can find the github repo here https://github.com/AUTOMATIC1111/stable-diffusion-webui
+You can find the github repo here [Stable Diffusion Github](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
 
-1. Prepare Your Computer: Before you begin, your computer needs to have the right tools. You'll need to install Python https://www.python.org/downloads/release/python-3106/ ( if you don't have it already ) , which is like the language your computer needs to speak to run this program. You also need something called git, which is a way for your computer to talk to GitHub, where the program lives.
+1. Prepare Your Computer: Before you begin, your computer needs to have the right tools. You'll need to install Python [Python 3.10](https://www.python.org/downloads/release/python-3106/) ( if you don't have it already ) , which is like the language your computer needs to speak to run this program. You also need something called git, which is a way for your computer to talk to GitHub, where the program lives.
 
 2. For Python, you need version 3.10.6. Even if there are newer versions, you need to stick with this one because the program we're running needs it. Make sure to check the box that says "Add Python to PATH" during installation. This lets your computer know where to find Python when it needs it.
 
 
-3. Get the Program: Now that your computer has the tools, we can go get the program. We're going to use git to download (or "clone") the program from GitHub. If you don't have git you can get it here https://git-scm.com/download/win  Open the command prompt (you can search for 'cmd' in your start menu), then type in 
+3. Get the Program: Now that your computer has the tools, we can go get the program. We're going to use git to download (or "clone") the program from GitHub. If you don't have git you can get it here [Install Git here](https://git-scm.com/download/win)  Open the command prompt (you can search for 'cmd' in your start menu), then type in 
 
 ```bash
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git 
