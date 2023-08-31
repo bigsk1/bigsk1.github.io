@@ -7,7 +7,7 @@
 </p>
 
 
-A Chat bot web app we created and explain how you can make your own 
+A Chat bot web app we created and explain how you can make your own https://github.com/bigsk1/TKS-GPT
 
 ---
 ### Welcome
@@ -44,7 +44,7 @@ As we grow and evolve, we're constantly on the lookout for new projects and idea
 
 ![airats](https://github.com/bigsk1/airats/blob/master/images/fish.jpg)
 
-ascii art generator written in python
+ascii art generator written in python https://github.com/bigsk1/airats
 
 ---
 
