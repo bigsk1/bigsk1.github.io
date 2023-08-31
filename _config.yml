@@ -24,7 +24,7 @@ title: bigsk1 blog                     # the main title
 tagline: A Doc site for projects   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  Doc site for different projects 
+  Doc site for AI, Tech and Self Hosted projects 
 
 # fill in the protocol & hostname for your site, e.g., "https://bigsk1.github.io"
 url: "https://bigsk1.github.io"
@@ -82,7 +82,7 @@ theme_mode: dark
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /assets/images/logo.jpg
+avatar: /assets/images/logo.png
 
 # boolean type, the global switch for ToC in posts.
 toc: true
