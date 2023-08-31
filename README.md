@@ -2,7 +2,10 @@
 
 ## The Home for Creative Tinkerers and Tech-Savvy DIYers
 
-![Image](/assets/images/tks-gpt.png)
+<p align="center">
+  <img src="/assets/images/tks-gpt.png">
+</p>
+
 
 A Chat bot web app we created and explain how you can make your own 
 
