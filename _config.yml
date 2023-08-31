@@ -19,9 +19,9 @@ timezone: America/Los_Angles
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: bigsk1 blog                     # the main title
+title: ~bigsk1~                     # the main title
 
-tagline: A Doc site for projects   # it will display as the sub-title
+tagline: 🚀 Software Sorcerer | Code Chemist | Tech Enthusiast 🛸   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Doc site for AI, Tech and Self Hosted projects 

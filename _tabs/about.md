@@ -16,7 +16,7 @@ Our DIY projects cover a wide range of topics, including:
 
 1. **Privacy Protection**: In today's digital age, safeguarding your online privacy has never been more crucial. We bring you step-by-step guides on how to enhance your privacy, from setting up VPNs to using secure messaging apps.
 2. **Self-Hosting**: Break free from the shackles of third-party services by hosting your own applications and websites. Discover our easy-to-follow tutorials on setting up servers, managing domains, and creating your online presence.
-3. **Building Apps with ChatGPT**: Get acquainted with OpenAI's powerful language model, and learn how to incorporate it into your projects. From creating conversational AI to generating creative content, we'll guide you through the process.
+3. **Building Apps with ChatGPT and using AI**: Get acquainted with OpenAI's powerful language model, and learn how to incorporate it into your projects. From creating conversational AI to generating creative content, we'll guide you through the process.
 4. **Curated Articles**: Stay informed and inspired with our handpicked selection of interesting articles from around the web. Covering a variety of topics related to technology, design, and creativity, our curated content will help you stay updated and motivated.
 
 As we grow and evolve, we're constantly on the lookout for new projects and ideas to share with our community. 
