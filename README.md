@@ -16,7 +16,7 @@ A treasure trove of knowledge and inspiration for anyone who believes in the pow
 
 ---
 
-### Who an I?
+### Who am I?
 
 I'm building a resource for passionate makers, driven by curiosity and a shared love for creating innovative projects. All my interests converge on this platform, bringing together a wealth of ideas, experiences, and projects for you to explore.
 
@@ -35,7 +35,7 @@ I'm building a resource for passionate makers, driven by curiosity and a shared 
 
 - **AI-Related Chat Models**: Explore the intricacies of chat models powered by Artificial Intelligence, and how you can build your own and getting working.
 
-- **Step to Step guides**: Stay informed and inspired with my selection of interesting topics. Covering a variety of related technology, design, and creativity, our content will help you stay updated and motivated to build your next project.
+- **Step to Step guides**: Stay informed and inspired with my selection of interesting topics. Covering a variety of related technology, design, and creativity, my content will help you stay updated and motivated to build your next project.
 
 
 ---
