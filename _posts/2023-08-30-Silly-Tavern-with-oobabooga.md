@@ -1,6 +1,6 @@
 ---
 title: Silly Tavern webui with oobabooga
-date: 2023-08-31 12:00:00  -500
+date: 2023-08-30 12:00:00  -500
 categories: [ai,docs,oobabooga,silly-tavern]
 tags: [docs,ai,oobabooga,silly-tavern,chatbot,llm]    # Tag should always be in lowercase
 ---
