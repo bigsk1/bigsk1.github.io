@@ -189,7 +189,7 @@ Example: python server.py --enable-modules=caption,summarize,classify
 This would enable Image Captioning, Chat Summary, and live updating Character Expressions
 
 ## One click Installer on windows for running everything at once
-I got tried of having to go and start every server manually when using SillyTavern 
+I got tired of having to go and start every server manually when using SillyTavern 
 
 I created a one click installer make a shortcut from it and place on your desktop 
 
