@@ -4,11 +4,11 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-# TKS DIY Enthusiasts Hub
+# bigsk1 Enthusiasts AI & Tech Hub
 
 ## The Home for Creative Tinkerers and Tech-Savvy DIYers
 
-Welcome to DIY Enthusiasts Hub, a treasure trove of knowledge and inspiration for anyone who believes in the power of hands-on learning and the thrill of building things from scratch. Our mission is to empower individuals with limited programming experience to explore the vast world of technology and unleash their creativity in the process.
+Welcome to DIY AI & Tech Enthusiasts Hub, a treasure trove of knowledge and inspiration for anyone who believes in the power of hands-on learning and the thrill of building things from scratch. Our mission is to empower individuals with limited programming experience to explore the vast world of technology and unleash their creativity in the process.
 
 At DIY Enthusiasts Hub, we're a community of passionate makers, driven by curiosity and a shared love for creating innovative projects. Our diverse backgrounds and interests converge on this platform, bringing together a wealth of ideas, experiences, and resources for you to explore.
 
