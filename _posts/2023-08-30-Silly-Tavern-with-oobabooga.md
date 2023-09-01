@@ -4,7 +4,7 @@ date: 2023-08-30 12:00:00  -500
 categories: [ai,docs,oobabooga,silly-tavern]
 tags: [docs,ai,oobabooga,silly-tavern,chatbot,llm]    # Tag should always be in lowercase
 image:
-  path: /assets/images/headers/silly.webp
+  path: /assets/images/headers/silly_tavern.webp
 ---
 
 ## Silly Tavern 

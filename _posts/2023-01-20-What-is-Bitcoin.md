@@ -3,6 +3,8 @@ title: What is Bitcoin?
 date: 2023-01-10 12:00:00  -500
 categories: [bitcoin,crypto]
 tags: [docs,bitcoin,crypto,blockchain]    # Tags should always be in lowercase
+image:
+  path: /assets/images/headers/btc.webp
 ---
 
 ## What is Bitcoin?
