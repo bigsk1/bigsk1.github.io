@@ -84,7 +84,7 @@ pip install -r requirements.txt
 
 ## Ubuntu 22.04+
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-### If you don't want the virtual enviroment just make sure you have installed 
+### If you don't want the virtual environment just make sure you have installed  
 </br>
 
 ```bash
@@ -197,7 +197,6 @@ Supports
     ICO: .ico
     WebP: .webp
 
-![Rat Image](/images/rat.jpg)
 
 ```bash
                                  
