@@ -3,6 +3,8 @@ title: Docker build a simple image
 date: 2023-01-23 12:00:00  -500
 categories: [docker]
 tags: [docker,docs]    # Tags should always be in lowercase
+image:
+  path: /assets/images/headers/docker.webp
 ---
 
 
