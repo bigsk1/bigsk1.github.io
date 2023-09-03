@@ -23,7 +23,7 @@ Both Web and Command Line usage
 
 Turn any image locally or remotely into ASCII characters.
 
-
+This project can be found on github here [ascii art generator](https://github.com/bigsk1/airats)
 
 # Installation
 
