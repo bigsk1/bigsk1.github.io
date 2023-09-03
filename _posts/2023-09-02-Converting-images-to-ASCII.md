@@ -10,20 +10,19 @@ image:
 # AIRATS  
 
 ## ASCII Image Convertor - How to install
+
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-</br>
+
+
 A simple Flask web app and command-line tool to generate ASCII art from an image URL or locally.
 
-</br>
+
 Both Web and Command Line usage
 
-</br>
-</br>
 
 
 Turn any image locally or remotely into ASCII characters.
 
-</br>
 
 
 # Installation
@@ -72,20 +71,18 @@ python3 -m venv venv
 
 source venv/bin/activate
 ```
-</br>
+
 
 3. Install the required Python packages:
 
 ```bash
 pip install -r requirements.txt
 ```
-</br>
-</br>
+
 
 ## Ubuntu 22.04+
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 ### If you don't want the virtual environment just make sure you have installed  
-</br>
 
 ```bash
 sudo apt install python3 && sudo apt install python3-pip && sudo apt install python3-flask && python3 -m pip install Pillow && python3 -m pip install requests && python3 -m pip install gunicorn
@@ -97,8 +94,7 @@ python3 app.py
 ```
 Open a web browser and visit [http://localhost:5000](http://localhost:5000) to access the app.
 
-</br>
-</br>
+
 
 ## Devcontainer VScode
 
@@ -107,7 +103,6 @@ Open in devcontainer and run! Find on localhost:5000
 ---
 
 
-</br>
 
 ## Windows 64bit install
 ![Windows 11](https://img.shields.io/badge/Windows%2011-%230079d5.svg?style=for-the-badge&logo=Windows%2011&logoColor=white)
@@ -123,7 +118,6 @@ git clone --single-branch --branch win64 https://github.com/bigsk1/airats.git
 ```
 see the requirements.txt for what dependencies are needed
 
-</br>
 
 # Usage
 
@@ -131,7 +125,7 @@ see the requirements.txt for what dependencies are needed
 
 ### Web Interface virtual environment in Python
 
-</br>
+
 
 1. Run the Flask app (optional):
 
@@ -148,21 +142,18 @@ flask run --host=0.0.0.0
 
 
 
-</br>
+
 
 ## Command Line
 
-</br>
+
 
 Run any of the following commands from the airats directory:
 
 python3 Main.py <image_url> [-w WIDTH] [-ht HEIGHT]
 
-</br>
-
 ### Image size can be changed as needed
 
-</br>
 
 You can also run an image you have locally using:
 
@@ -178,14 +169,14 @@ python3 Main.py https://your-image-url.jpeg -w 150 -ht 50
 ```bash
 python3 Main.py images/rat.jpg -w 50 -ht 25
 ```
-</br>
+
 
 Output image to a file
 ```bash
 python3 Main.py images/rat.jpg -w 80 -o output.txt
 ```
 
-</br>
+
 
 Supports 
 
@@ -225,7 +216,7 @@ Supports
                               ..            
 ```
 
-</br>
+
 
 <a href='https://github.com/bigsk1/airats/blob/master/LICENSE'>LICENSE</a>
 
