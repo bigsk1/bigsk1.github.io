@@ -57,9 +57,11 @@ docker run -d -p 5000:5000 <your_image_name>
 
 
 1. Clone the repo
+   
 ```bash
 git clone https://github.com/bigsk1/airats.git
 ```
+
 ```bash
 cd airats
 ```
@@ -99,9 +101,6 @@ Open a web browser and visit [http://localhost:5000](http://localhost:5000) to a
 ## Devcontainer VScode
 
 Open in devcontainer and run! Find on localhost:5000
-
----
-
 
 
 ## Windows 64bit install

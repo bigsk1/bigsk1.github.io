@@ -45,4 +45,4 @@ Use the convert.sh
 
 give it execute permissions (chmod +x convert.sh), and then you can run it with ./convert.sh
 
-Find it here on github https://github.com/bigsk1/Base64-Convert
+Find it here on github [Base64](https://github.com/bigsk1/Base64-Convert)
