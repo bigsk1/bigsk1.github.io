@@ -8,7 +8,7 @@ image:
 ---
 
 
-# Base64 Convert  images to webp and base64
+# Convert  images to webp and base64
 Small python script to resize and convert images to webp and provide base64 data in a .txt file
 
 ## Overview
