@@ -1,7 +1,7 @@
 ---
 title: How a GPT Agent Can Improve Your Everyday Life
 date: 2023-04-28 12:00:00  -500
-categories: [ai,docs,chatgpt]
+categories: [ai,docs]
 tags: [docs,chatgpt,ai,gptagent]    # Tag should always be in lowercase
 image:
   path: /assets/images/headers/chatbot.webp

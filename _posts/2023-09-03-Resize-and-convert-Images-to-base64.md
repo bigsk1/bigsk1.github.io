@@ -1,7 +1,7 @@
 ---
 title: Resize and convert images to base64 and webp
 date: 2023-09-02 12:00:00  -500
-categories: [ai,docs,images,python]
+categories: [images,python]
 tags: [docs,ai,base64,images,webp,python]    # Tag should always be in lowercase
 image:
   path: /assets/images/headers/base64.webp

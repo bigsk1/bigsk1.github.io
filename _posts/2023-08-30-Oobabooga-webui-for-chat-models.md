@@ -1,7 +1,7 @@
 ---
 title: oobabooga Webui for chat models
 date: 2023-08-09 12:00:00  -500
-categories: [ai,docs,oobabooga]
+categories: [ai,docs]
 tags: [docs,ai,oobabooga,chatbot,llm]    # Tag should always be in lowercase
 image:
   path: /assets/images/headers/chat_bot.webp
