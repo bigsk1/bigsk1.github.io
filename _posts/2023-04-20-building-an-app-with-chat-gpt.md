@@ -4,7 +4,7 @@ date: 2023-04-20 12:00:00  -500
 categories: [ai,docs]
 tags: [ubuntu,docs,chatgpt,app,flask,react,ai]    # Tag should always be in lowercase
 image:
-  path: /assets/images/headers/tks-gpt2.webp
+  path: https://github.com/bigsk1/TKS-GPT/raw/production/static/large.png
 ---
 
 ## Building a GPT Chatbot with Flask and React  🤖
