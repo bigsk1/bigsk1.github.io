@@ -53,4 +53,4 @@ The ASCII Art Image Converter for Stable Diffusion Automatic1111 Web UI is a fan
 The script is open-source and free to use. For more standalone ASCII art converters compatible with Linux, Windows, Docker, and VSCode DevContainer, check out [bigsk1's GitHub page for airats](https://bigsk1.github.io/posts/Converting-images-to-ASCII/).
 
 
-Happy ASCII art creating!
+Happy ASCII art creating
