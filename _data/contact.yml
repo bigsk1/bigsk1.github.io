@@ -7,9 +7,13 @@
   type: twitter
   icon: 'fab fa-twitter'
 -
+  type: youtube
+  icon: 'fab fa-youtube'
+  url: 'https://www.youtube.com/@bigsk1'
+-  
   type: link
   icon: 'fas fa-link'
-  noblank: true           
+  url: 'https://links.thekratomsyndicate.com'           
 -
   type: rss
   icon: 'fas fa-rss'
