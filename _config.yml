@@ -35,6 +35,9 @@ github:
 twitter:
   username: kratomsyndicate            # change to your twitter username
 
+link:
+  url: https://links.thekratomsyndicate.com  
+
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
