@@ -4,7 +4,7 @@ date: 2023-09-02 12:00:00  -500
 categories: [images,docs]
 tags: [docs,ascii,images]    # Tag should always be in lowercase
 image:
-  path: /assets/images/headers/fish.webp
+  path: /assets/images/headers/ascii.webp
 ---
 
 # AIRATS  
