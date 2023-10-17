@@ -83,3 +83,4 @@ Example of experimental UI for working with AutoGen agents, based on the AutoGen
 [https://github.com/ivangabriele/openai-autogen-dev-studio](https://github.com/ivangabriele/openai-autogen-dev-studio)
 
 {% include embed/youtube.html id='vU2S6dVf79M' %}
+📺 [Watch Video](https://www.youtube.com/watch?v=vU2S6dVf79M)
