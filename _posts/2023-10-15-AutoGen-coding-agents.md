@@ -4,7 +4,7 @@ date: 2023-10-15 12:00:00  -500
 categories: [ai,docs]
 tags: [ai,docs] 
 image:
-path: /assets/images/headers/autogen.webp
+  path: /assets/images/headers/autogen.webp
 ---
 
 # Autogen
