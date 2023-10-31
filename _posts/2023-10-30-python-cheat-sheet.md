@@ -114,9 +114,10 @@ if 'key' in my_dict:
 ```
 So to break it down for nested dictionary below:
 
-    weights: This is a variable that holds a dictionary.
-    'yelp' and 'turnover': These are keys within the weights dictionary.
-    config['yelp']['weight'] and config['turnover']['weight']: These are values that are being retrieved from another dictionary (config) and stored as values in the weights dictionary.
+weights: This is a variable that holds a dictionary.
+'yelp' and 'turnover': These are keys within the weights dictionary.
+config['yelp']['weight'] and config['turnover']['weight']: These are values that are being retrieved from another dictionary (config) and stored as values in the weights dictionary.
+
 ```python
 # Define a nested dictionary for config
 
