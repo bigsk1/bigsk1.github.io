@@ -112,6 +112,29 @@ del my_dict['key']
 if 'key' in my_dict:
     print("Key exists")
 ```
+So to break it down for nested dictionary below:
+
+    weights: This is a variable that holds a dictionary.
+    'yelp' and 'turnover': These are keys within the weights dictionary.
+    config['yelp']['weight'] and config['turnover']['weight']: These are values that are being retrieved from another dictionary (config) and stored as values in the weights dictionary.
+```python
+# Define a nested dictionary for config
+
+config = {
+    'yelp': {
+        'weight': 0.6
+    },
+    'turnover': {
+        'weight': 0.4
+    }
+}
+
+# Define a dictionary for weights that takes values from config
+weights = {
+    'yelp': config['yelp']['weight'],  # 0.6
+    'turnover': config['turnover']['weight']  # 0.4
+}
+```
 
 ## If, Elif, Else
 
