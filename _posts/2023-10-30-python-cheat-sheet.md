@@ -9,6 +9,8 @@ image:
 
 PYTHON 3.6+  CHEAT SHEET
 
+Sample code for quick reference
+
 ## String Operations
 
 ```python
