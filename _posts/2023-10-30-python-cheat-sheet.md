@@ -138,7 +138,6 @@ weights = {
 ```
 
 ## If, Elif, Else
-
 ```python
 # Basic if-elif-else
 x = 10
@@ -161,7 +160,6 @@ if x > 5 and x < 15:
 
 
 ## While Loop
-
 ```python
 # Basic while loop
 count = 0
@@ -180,7 +178,6 @@ while True:
 
 
 ## For Loop
-
 ```python
 # Basic for loop
 for i in range(5):
@@ -193,7 +190,6 @@ for num in [0, 1, 2, 3, 4]:
 
 
 ## Try and Except
-
 ```python
 # Basic try-except
 try:
@@ -216,9 +212,7 @@ except Exception as e:
     print(f"An error occurred: {e}")
 ```
 
-
 ## Functions
-
 ```python
 # Basic function
 def greet(name):
@@ -239,9 +233,7 @@ def greet_with_log(name, log=False):
     return f"Hello, {name}"
 ```
 
-
 ## File Operations
-
 ```python
 # Reading a file
 with open('file.txt', 'r') as f:
@@ -257,7 +249,6 @@ with open('file.txt', 'a') as f:
 ```
 
 ## Importing Modules and Libraries
-
 ```python
 # Importing entire module
 import math
@@ -270,7 +261,6 @@ import numpy as np
 ```
 
 ## Working with Dates
-
 ```python
 from datetime import datetime, timedelta
 
@@ -283,8 +273,8 @@ formatted_date = now.strftime('%Y-%m-%d %H:%M:%S')
 # Date arithmetic
 tomorrow = now + timedelta(days=1)
 ```
-## Basic Logging to Console
 
+## Basic Logging to Console
 ```python
 import logging
 
@@ -294,7 +284,6 @@ logging.info('This is an info message')
 ```
 
 ## Logging Levels
-
 ```python
 # Available logging levels in increasing order of severity
 logging.debug('Debug message')
@@ -305,7 +294,6 @@ logging.critical('Critical error message')
 ```
 
 ## Logging to a File
-
 ```python
 # Logging to a file
 logging.basicConfig(filename='app.log', level=logging.INFO)
@@ -313,7 +301,6 @@ logging.info('Logged to file')
 ```
 
 ## Advanced Logging: Handlers and Formatters
-
 ```python
 import logging
 
@@ -349,7 +336,6 @@ logger.critical('Critical message')
 ```
 
 ## Exception Logging
-
 ```python
 try:
     x = 1 / 0
@@ -358,12 +344,76 @@ except Exception as e:
 ```
 
 ## Conditional Logging
-
 ```python
 x = 5
 if x < 10:
     logging.warning(f'x is less than 10: x={x}')
 ```
+
+## Arithmetic Operators
+```python
+print(3 + 2)     # Addition: 5
+print(3 - 2)     # Subtraction: 1
+print(3 * 2)     # Multiplication: 6
+print(3 / 2)     # Division: 1.5
+print(3 % 2)     # Modulus: 1
+print(3 ** 2)    # Exponentiation: 9
+print(3 // 2)    # Floor Division: 1
+```
+
+## Comparison Operators
+```python
+print(3 == 2)    # Equal: False
+print(3 != 2)    # Not equal: True
+print(3 > 2)     # Greater than: True
+print(3 < 2)     # Less than: False
+print(3 >= 2)    # Greater than or equal to: True
+print(3 <= 2)    # Less than or equal to: False
+```
+
+## Logical Operators
+```python
+print(True and False)    # and: False
+print(True or False)     # or: True
+print(not True)          # not: False
+```
+
+## Assignment Operators
+```python
+a = 3
+a += 2        # Add and assign: a = 5
+a -= 1        # Subtract and assign: a = 4
+a *= 2        # Multiply and assign: a = 8
+a /= 4        # Divide and assign: a = 2.0
+```
+
+## Bitwise Operators
+```python
+print(3 & 2)    # Bitwise AND: 2 (0b11 & 0b10 = 0b10)
+print(3 | 2)    # Bitwise OR: 3 (0b11 | 0b10 = 0b11)
+print(3 ^ 2)    # Bitwise XOR: 1 (0b11 ^ 0b10 = 0b01)
+print(~3)       # Bitwise NOT: -4 (two's complement of 0b11 is -0b100)
+print(3 << 1)   # Bitwise left shift: 6 (0b11 << 1 = 0b110)
+print(3 >> 1)   # Bitwise right shift: 1 (0b11 >> 1 = 0b1)
+```
+
+## Membership Operators
+```python
+numbers = [1, 2, 3, 4, 5]
+print(3 in numbers)       # in: True
+print(6 not in numbers)   # not in: True
+```
+
+## Identity Operators
+```python
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+print(a is b)       # is: True (a and b refer to the same list)
+print(a is c)       # is: False (a and c are equal but refer to different lists)
+print(a is not c)   # is not: True
+```
+### We can put it all together in a single Python script if needed.
 
 ## Example of all code together
 Below is an example Python script that integrates various elements: variables, data types, functions, control structures (if, elif, else, while), error handling (try and except), and logging. This example aims to show how these elements can work together in a single Python script.
