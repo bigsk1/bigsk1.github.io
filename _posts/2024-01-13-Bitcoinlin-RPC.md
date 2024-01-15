@@ -7,7 +7,7 @@ image:
   path: /assets/images/headers/bitcoinlib_header.webp
 ---
 
-# Bitcoinlib RPC project
+## Bitcoinlib RPC Project
 So I wanted to see if I could add a message in a bitcoin transaction and have it permanently on the blockchain. The recent hack with the SEC's twitter account and post of the bitcoin Spot ETF was kinda funny considering the SEC didn't secure there account with 2fa and they had a post recently about security and recommending just that using 2fa online. 
 
 ![Image](/assets/images/sec_twitter.webp)
@@ -27,7 +27,7 @@ Copying the TXID and pasting it into the bitcoin block explorer you can see the 
 
 ---
 
-### What the scripts do
+## What the scripts do
 
 Allows you to use your locally hosted Bitcoin node (like Umbrel) and bitcoinlib in Python to create a wallet and send `OP_RETURN` message in a Bitcoin transaction with small changes in the python files by adding your info.
 
@@ -57,13 +57,13 @@ Another bitcoin block explorer is opreturn.net which shows the op_return message
 - Install bitcoinlib: `pip install bitcoinlib`
 - Install required dependencies: `sudo apt install build-essential python3-dev libgmp3-dev`
 
-### Create Wallet
+## Create Wallet
 
 - Open `create_test_wallet.py` and change the wallet name at the bottom (avoid spaces).
 - Run `python create_test_wallet.py`
 - You will get a `.txt` file with wallet details, including the private key in WIF format.
 
-### Set Environment Variables
+## Set Environment Variables
 
 Added your details and run the following to your terminal or you can add the secrets to your `.bashrc`
 If using umbrel or similar select bitcoin node, connect, RPC local network credintials
@@ -76,7 +76,7 @@ export BITCOIN_RPC_PASSWORD='your_rpc_password'
 export MY_BTC_PRIVATE_KEY='your_private_key_here'
 ```
 
-### Configure Bitcoin RPC Connection in bitcoinlib
+## Configure Bitcoin RPC Connection in bitcoinlib
 
 - Edit ~/.bitcoinlib/bitcoin.conf and add your details:
 
@@ -90,7 +90,7 @@ txindex=1
 server=1
 ```
 
-### Test RPC Connection
+## Test RPC Connection
 
 - Run the following curl command to check if the RPC connection is working (fill in your username, password, IP, and port):
 
@@ -98,12 +98,12 @@ server=1
 curl --user rpc_user_name:rpc_password --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockchaininfo", "params": [] }' -H 'content-type: text/plain;' http://ip:port/
 ```
 
-### Fund Your Wallet
+## Fund Your Wallet
 
 - Send funds to your new wallet's public address (from the .txt file). Make sure to send enough to cover the amount you send out of the wallet + mining fees, you can check current mempool fees before sending at [https://mempool.space/](https://mempool.space/)
 - Wait for confirmations on a block explorer or run `python wallet_scan_details.py` (enter the correct wallet name inside file).
 
-### Prepare and Send Transaction
+## Prepare and Send Transaction
 
 - Open btcmessage_rpc.py , look under Configuration code block
 - Add your wallet name, public address, sender's address, fee, sending amounts, and your message (less than 80 bytes). Note the amount to send and fees are in btc like (0.001), so use a calculator to convert BTC to USD,  [https://coinmarketcap.com/converter/btc/usd](https://coinmarketcap.com/converter/btc/usd)
@@ -113,4 +113,5 @@ Run `python btcmessage_rpc.py`  This script uses the wallet you created in bitco
 
 Copy your TXID and paste it in a block explorer like Mempool [https://mempool.space/](https://mempool.space/) to see your OP_RETURN message and details.
 
+## Github Repo
 Github repo: [https://github.com/bigsk1/bitcoinlib_rpc](https://github.com/bigsk1/bitcoinlib_rpc)
