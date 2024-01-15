@@ -9,9 +9,9 @@ image:
 
 
 
-# SigScript for Stable Diffusion Images
+# SigScript for Images
 
-This script automatically adds a signature to all the Stable Diffusion images you generate. The idea is to make it easier to brand your images with your own name or alias.
+This script automatically adds a signature to all the Stable Diffusion images you generate or any image you want. The idea is to make it easier to brand your images with your own name or alias. You can add a signature to hundreds of thousands of images quickly.
 
 ## 🎥 Demo
 
@@ -90,14 +90,10 @@ If your original image name is `00925-3431573143.png`, the signed image will be 
 
 
 
- 
- <div style="text-align: center;">
+![Sig Script Image](https://imagizer.imageshack.com/img923/5148/UklSgD.jpg)
 
-![alt text](https://imagizer.imageshack.com/img923/5148/UklSgD.jpg
- "Our logo")
-
-</div>
  
+
  ## Github repo
 
  [https://github.com/bigsk1/SigScript](https://github.com/bigsk1/SigScript)
