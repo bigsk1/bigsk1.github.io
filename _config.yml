@@ -21,10 +21,10 @@ timezone: America/Los_Angles
 
 title: ~bigsk1~                     # the main title
 
-tagline: Code Chemist 🛸   # it will display as the sub-title
+tagline: AI 🤖, Tech 💻, Python 🐍, News 📰, Crypto 🪙 and more 🚀   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  Doc site for AI, Tech and Self Hosted projects 
+  Doc site for AI, Tech, News, Crypto and Self Hosted projects 
 
 # fill in the protocol & hostname for your site, e.g., "https://bigsk1.github.io"
 url: "https://bigsk1.github.io"
