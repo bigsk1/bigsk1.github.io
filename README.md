@@ -33,7 +33,7 @@ I'm building a resource for passionate makers, driven by curiosity and a shared 
 
 ---
 
-![Homepage Screenshot](/assets/images/home_page.png)
+[![bigsk1 site](/assets/images/home_page.png)](https://bigsk1.com/)
 
 ---
 
