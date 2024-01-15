@@ -4,7 +4,7 @@ date: 2024-1-13 12:00:00  -500
 categories: [bitcoin]
 tags: [bitcoin] 
 image:
-  path: /assets/images/headers/bitcoinlib.webp
+  path: /assets/images/headers/bitcoinlib_header.webp
 ---
 
 # Bitcoinlib RPC project
@@ -35,9 +35,11 @@ Used with Linux ( tested in WSL2 Ubuntu on one machine and umbrel bitcoin node o
 
 ![Image](/assets/images/OP_RETURN_message.png)
 
-https://mempool.space/tx/aceee291b364905098aa28019c6521b9941daa1104772bad358e1334e1bd19a7
+[mempool block explorer btc transaction](https://mempool.space/tx/aceee291b364905098aa28019c6521b9941daa1104772bad358e1334e1bd19a7)
 
-another bitcoin block explorer is opreturn.net which shows the op_return messages better  https://opreturn.net/aceee291b364905098aa28019c6521b9941daa1104772bad358e1334e1bd19a7
+Another bitcoin block explorer is opreturn.net which shows the op_return messages better 
+
+[OpReturn block explorer btc transaction](https://opreturn.net/aceee291b364905098aa28019c6521b9941daa1104772bad358e1334e1bd19a7)
 
 ## Overview
 
@@ -98,17 +100,17 @@ curl --user rpc_user_name:rpc_password --data-binary '{"jsonrpc": "1.0", "id":"c
 
 ### Fund Your Wallet
 
-- Send funds to your new wallet's public address (from the .txt file). Make sure to send enough to cover the amount you send out of the wallet + mining fees, you can check current mempool fees before sending at https://mempool.space/
+- Send funds to your new wallet's public address (from the .txt file). Make sure to send enough to cover the amount you send out of the wallet + mining fees, you can check current mempool fees before sending at [https://mempool.space/](https://mempool.space/)
 - Wait for confirmations on a block explorer or run `python wallet_scan_details.py` (enter the correct wallet name inside file).
 
 ### Prepare and Send Transaction
 
 - Open btcmessage_rpc.py , look under Configuration code block
-- Add your wallet name, public address, sender's address, fee, sending amounts, and your message (less than 80 bytes). Note the amount to send and fees are in btc like (0.001), so use a calculator to convert BTC to USD,  https://coinmarketcap.com/converter/btc/usd
+- Add your wallet name, public address, sender's address, fee, sending amounts, and your message (less than 80 bytes). Note the amount to send and fees are in btc like (0.001), so use a calculator to convert BTC to USD,  [https://coinmarketcap.com/converter/btc/usd](https://coinmarketcap.com/converter/btc/usd)
 - Run the script to send your transaction when ready.
 
 Run `python btcmessage_rpc.py`  This script uses the wallet you created in bitcoinlib, gets it up to date with UTXOs, creates the transaction, extracts the raw transaction hex, and then sends it to your Bitcoin node for broadcasting. If successful, you will see the TXID and the raw transaction hex.
 
-Copy your TXID and paste it in a block explorer like Mempool https://mempool.space/ to see your OP_RETURN message and details.
+Copy your TXID and paste it in a block explorer like Mempool [https://mempool.space/](https://mempool.space/) to see your OP_RETURN message and details.
 
-Github repo: https://github.com/bigsk1/bitcoinlib_rpc
+Github repo: [https://github.com/bigsk1/bitcoinlib_rpc](https://github.com/bigsk1/bitcoinlib_rpc)
