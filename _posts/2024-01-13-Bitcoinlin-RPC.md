@@ -11,7 +11,7 @@ image:
 So I wanted to see if I could add a message in a bitcoin transaction and have it permanently on the blockchain. The recent hack with the SEC's twitter account and post of the bitcoin Spot ETF was kinda funny considering the SEC didn't secure there account with 2fa and they had a post recently about security and recommending just that using 2fa online. 
 
 ![Image](/assets/images/sec_twitter.webp)
-https://twitter.com/SECGov/status/1744837121406349714
+[https://twitter.com/SECGov/status/1744837121406349714](https://twitter.com/SECGov/status/1744837121406349714)
 
 So I went about trying to do this with no experiance adding a message in a bitcoin transaction. I'm sure there are tools or wallets out there that would make this process easy, but I wondered if I could do this in python and also use my own bitcoin node. Also building something new can be fun. 
 
