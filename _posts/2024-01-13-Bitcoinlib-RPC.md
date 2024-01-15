@@ -2,7 +2,7 @@
 title: Send a Message in Bitcoin Transactions
 date: 2024-1-13 12:00:00  -500
 categories: [bitcoin]
-tags: [bitcoin] 
+tags: [bitcoin,python] 
 image:
   path: /assets/images/headers/bitcoinlib_header.webp
 ---
