@@ -1,5 +1,5 @@
 ---
-title: Sig Script
+title: Sig Script - Signature on Images
 date: 2023-12-10 12:00:00  -500
 categories: [python]
 tags: [docs,python,windows] 
@@ -9,7 +9,7 @@ image:
 
 
 
-# SigScript for Images
+# SigScript
 
 This script automatically adds a signature to all the Stable Diffusion images you generate or any image you want. The idea is to make it easier to brand your images with your own name or alias. You can add a signature to hundreds of thousands of images quickly.
 
