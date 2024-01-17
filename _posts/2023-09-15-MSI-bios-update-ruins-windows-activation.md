@@ -1,8 +1,8 @@
 ---
 title: MSI bios update bricks Windows 11 activation
 date: 2023-09-15 12:00:00  -500
-categories: [msi]
-tags: [docs,msi]    # Tag should always be in lowercase
+categories: [windows]
+tags: [docs,msi,windows]    # Tag should always be in lowercase
 image:
   path: /assets/images/headers/msi.webp
 ---

@@ -1,8 +1,8 @@
 ---
 title: Stable Diffusion Automatic1111 ascii images
 date: 2023-09-05 12:00:00  -500
-categories: [ai,images]
-tags: [docs,ai,images,automatic1111,python,sdxl,script]    # Tag should always be in lowercase
+categories: [ai]
+tags: [docs,ai,images,automatic1111,python,sdxl,script,windows]    # Tag should always be in lowercase
 image:
   path: /assets/images/headers/ascii_cat.webp
 ---

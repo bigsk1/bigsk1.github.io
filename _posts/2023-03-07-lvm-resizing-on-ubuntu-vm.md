@@ -2,7 +2,7 @@
 title: Resizing LVM disk on Ubuntu VM
 date: 2023-03-06 12:00:00  -500
 categories: [ubuntu]
-tags: [ubuntu,docs,resize,parted,proxmox,resize2fs,lvm]    # Tag should always be in lowercase
+tags: [ubuntu,docs,resize,parted,proxmox,resize2fs,lvm,linux]    # Tag should always be in lowercase
 image:
   path: /assets/images/headers/ubuntu_logo.webp
 ---

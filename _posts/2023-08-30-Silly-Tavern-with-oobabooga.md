@@ -1,8 +1,8 @@
 ---
 title: Silly Tavern webui with oobabooga
 date: 2023-08-30 12:00:00  -500
-categories: [ai,docs]
-tags: [docs,ai,oobabooga,silly-tavern,chatbot,llm]    # Tag should always be in lowercase
+categories: [ai]
+tags: [docs,ai,oobabooga,silly-tavern,chatbot,llm,windows]    # Tag should always be in lowercase
 image:
   path: /assets/images/headers/silly_tavern.webp
 ---

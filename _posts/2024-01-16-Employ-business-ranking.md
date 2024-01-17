@@ -2,7 +2,7 @@
 title: Employ Business Rankings
 date: 2024-1-15 12:00:00  -500
 categories: [python]
-tags: [python,docs] 
+tags: [python,flask,docs] 
 image:
   path: /assets/images/headers/employ.webp
 ---

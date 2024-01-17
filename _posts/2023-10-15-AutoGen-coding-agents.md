@@ -1,8 +1,8 @@
 ---
 title: Autogen Agents
 date: 2023-10-15 12:00:00  -500
-categories: [ai,docs]
-tags: [ai,docs] 
+categories: [ai]
+tags: [ai,docs,windows,linux] 
 image:
   path: /assets/images/headers/autogen.webp
 ---
