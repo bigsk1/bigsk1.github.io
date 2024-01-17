@@ -1,8 +1,8 @@
 ---
 title: Employ Business Rankings
-date: 2024-1-13 12:00:00  -500
-categories: [vercel]
-tags: [vercel,docs] 
+date: 2024-1-15 12:00:00  -500
+categories: [python]
+tags: [python,docs] 
 image:
   path: /assets/images/headers/employ.webp
 ---
