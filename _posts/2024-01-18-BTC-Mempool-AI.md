@@ -12,8 +12,7 @@ image:
 Real-time data from the bitcoin mempool. Check your addresses, transactions, UTXO's . Get current mempool fee rates and a lot more!
 
 
-{% include embed/twitter.html user='KratomSyndicate' id='1747818094574424497' %}
-
+![Twitter Post](https://imagizer.imageshack.com/img922/8003/HOaQg4.jpg)
 
 ---
 
