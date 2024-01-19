@@ -14,21 +14,18 @@
     {%- endcapture -%}
   
     <!-- SEO Tags -->
-   {% seo title=false %}
+    {% seo title=false %}
 
     <!-- Setup Open Graph and Twitter image -->
-   {% if page.image %}
-   {% assign src = page.image.path | default: page.image %}
-   {% unless src contains '://' %}
-    {% assign img_url = src | absolute_url %}
-    <meta property="og:image" content="{{ img_url }}" />
-    <meta name="twitter:image" content="{{ img_url }}" />
-   {% endunless %}
-   {% elsif site.social_preview_image %}
-   {% assign img_url = site.social_preview_image | absolute_url %}
-    <meta property="og:image" content="{{ img_url }}" />
-    <meta name="twitter:image" content="{{ img_url }}" />
-   {% endif %}
+    {% assign img_url = page.image.path | default: page.image %}
+    {% if img_url == nil or img_url contains '://' %}
+    {% assign img_url = site.social_preview_image | absolute_url %}
+    {% endif %}
+
+    {% if img_url %}
+     <meta property="og:image" content="{{ img_url }}" />
+     <meta name="twitter:image" content="{{ img_url }}" />
+    {% endif %}
   
     <title>
       {%- unless page.layout == 'home' -%}
