@@ -27,7 +27,7 @@ description: >-                        # used by seo meta and the atom feed
   Doc site for AI, Tech, HomeLab, Crypto and Self Hosted projects 
 
 # fill in the protocol & hostname for your site, e.g., "https://bigsk1.github.io"
-url: "https://bigsk1.github.io"
+url: "https://bigsk1.com"
 
 github:
   username: bigsk1             # change to your github username
