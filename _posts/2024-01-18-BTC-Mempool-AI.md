@@ -2,7 +2,7 @@
 title: BTC Mempool AI on GPT Store
 date: 2024-1-18 02:00:00  -500
 categories: [ai]
-tags: [ai,gpt,openai] 
+tags: [ai,gpt,openai,bitcoin] 
 image:
   path: /assets/images/headers/mempool.webp
 ---
