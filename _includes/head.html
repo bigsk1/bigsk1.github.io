@@ -4,6 +4,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="twitter:card" content="summary">
     <meta
       name="viewport"
       content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
@@ -13,28 +14,37 @@
       {% seo title=false %}
     {%- endcapture -%}
   
-    <!-- SEO Tags -->
-    {% seo title=false %}
-
-    <!-- Setup Open Graph and Twitter image -->
-    {% assign img_url = page.image.path | default: page.image %}
-    {% if img_url %}
-    {% if img_url contains '://' %}
-    <!-- Image URL is already absolute -->
-    <meta property="og:image" content="{{ img_url }}" />
-    <meta name="twitter:image" content="{{ img_url }}" />
-   {% else %}
-    <!-- Convert relative URL to absolute -->
-    {% assign img_url = img_url | absolute_url %}
-     <meta property="og:image" content="{{ img_url }}" />
-     <meta name="twitter:image" content="{{ img_url }}" />
-   {% endif %}
-    {% else %}
-  <!-- Use site-wide fallback image -->
-  {% assign img_url = site.social_preview_image | absolute_url %}
-    <meta property="og:image" content="{{ img_url }}" />
-    <meta name="twitter:image" content="{{ img_url }}" />
+    <!-- Setup Open Graph image -->
+  
+    {% if page.image %}
+      {% assign src = page.image.path | default: page.image %}
+  
+      {% unless src contains '://' %}
+        {%- capture img_url -%}
+          {{ src | absolute_url }}
+        {%- endcapture -%}
+  
+      {% assign old_meta_clip = '<meta name="twitter:card"' %}
+      {% assign new_meta_clip = og_image | append: old_meta_clip %}
+      {% assign seo_tags = seo_tags | replace: old_meta_clip, new_meta_clip %}
+      {% endunless %}
+  
+    {% elsif site.social_preview_image %}
+      {%- capture img_url -%}
+      {{ site.social_preview_image | absolute_url }}
+      {%- endcapture -%}
+  
+      {%- capture og_image -%}
+        <meta property="og:image" content="{{ img_url }}" />
+        <meta name="twitter:image" content="{{ img_url }}" />
+      {%- endcapture -%}
+  
+      {% assign old_meta_clip = '<meta name="twitter:card"' %}
+      {% assign new_meta_clip = og_image | append: old_meta_clip %}
+      {% assign seo_tags = seo_tags | replace: old_meta_clip, new_meta_clip %}
     {% endif %}
+  
+    {{ seo_tags }}
   
     <title>
       {%- unless page.layout == 'home' -%}
