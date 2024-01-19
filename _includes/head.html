@@ -18,13 +18,22 @@
 
     <!-- Setup Open Graph and Twitter image -->
     {% assign img_url = page.image.path | default: page.image %}
-    {% if img_url == nil or img_url contains '://' %}
-    {% assign img_url = site.social_preview_image | absolute_url %}
-    {% endif %}
-
     {% if img_url %}
+    {% if img_url contains '://' %}
+    <!-- Image URL is already absolute -->
+    <meta property="og:image" content="{{ img_url }}" />
+    <meta name="twitter:image" content="{{ img_url }}" />
+   {% else %}
+    <!-- Convert relative URL to absolute -->
+    {% assign img_url = img_url | absolute_url %}
      <meta property="og:image" content="{{ img_url }}" />
      <meta name="twitter:image" content="{{ img_url }}" />
+   {% endif %}
+    {% else %}
+  <!-- Use site-wide fallback image -->
+  {% assign img_url = site.social_preview_image | absolute_url %}
+    <meta property="og:image" content="{{ img_url }}" />
+    <meta name="twitter:image" content="{{ img_url }}" />
     {% endif %}
   
     <title>
