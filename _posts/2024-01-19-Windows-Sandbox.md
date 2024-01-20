@@ -41,7 +41,7 @@ like ( sandbox_shared.wsb ) Make sure to add a folder that already existing on y
 
 ### Sandbox for a Shared Enviroment
 
-```yaml
+```xml
 <Configuration>
     <MappedFolders>
         <MappedFolder>
@@ -54,7 +54,7 @@ like ( sandbox_shared.wsb ) Make sure to add a folder that already existing on y
 
 ### No Networking with Protections Enabled
 
-```yaml
+```xml
 <Configuration>
     <MappedFolders>
         <MappedFolder>
@@ -69,7 +69,7 @@ like ( sandbox_shared.wsb ) Make sure to add a folder that already existing on y
 ### No Networking -  Protections Enabled -  No clipboard
 
 
-```yaml
+```xml
 <Configuration>
     <MappedFolders>
         <MappedFolder>
@@ -88,7 +88,7 @@ like ( sandbox_shared.wsb ) Make sure to add a folder that already existing on y
 
 ### Protected Client -  Read Only with Networking
 
-```yaml
+```xml
 <Configuration>
     <MappedFolders>
         <MappedFolder>
@@ -102,7 +102,7 @@ like ( sandbox_shared.wsb ) Make sure to add a folder that already existing on y
 
 ## Explanation of each option
 
-```yaml
+```xml
 <Configuration>
     <MappedFolders>
         <MappedFolder>
@@ -160,7 +160,7 @@ like ( sandbox_shared.wsb ) Make sure to add a folder that already existing on y
 
 ## Example of a Highly Configurable .wsb File
 
-```yaml
+```xml
 <Configuration>
     <MappedFolders>
         <MappedFolder>
@@ -196,7 +196,7 @@ start FirefoxInstaller.exe /silent /install
 
 then add a LogonCommand to your .wsb to run the batch script
 
-```yaml
+```xml
 <LogonCommand>
     <Command>C:\Users\WDAGUtilityAccount\Desktop\SharedFolder\firefox_download.bat</Command>
 </LogonCommand>
@@ -205,7 +205,7 @@ then add a LogonCommand to your .wsb to run the batch script
 ###  Complete .wsb Configuration Example
 Add your Host Folder path
 
-```yaml
+```xml
 <Configuration>
     <MappedFolders>
         <MappedFolder>
