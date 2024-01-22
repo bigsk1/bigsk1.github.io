@@ -30,6 +30,7 @@ author:
   name: bigsk1
   url: https://bigsk1.com/
   twitter: kratomsyndicate
+  picture: /img/bigsk1.png
 
 # fill in the protocol & hostname for your site, e.g., "https://bigsk1.github.io"
 url: "https://bigsk1.com"
@@ -59,7 +60,7 @@ social:
 
 google_site_verification: "vurRDdv3RazIE_zO_B_v35Pu6q_9wkfaae9iyGMRRas"            # fill in to your verification string
 
-seo_description_max_words: 200
+seo_description_max_words: 150
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
