@@ -26,7 +26,9 @@ tagline: Doc site for AI | Tech | HomeLab | Crypto | Docker and more 🚀  # it 
 description: >-                        # used by seo meta and the atom feed
   Doc site for AI, Tech, HomeLab, Crypto and Self Hosted projects 
 
-author: bigsk1
+author:
+  name: bigsk1
+  url: https://bigsk1.com/
 
 # fill in the protocol & hostname for your site, e.g., "https://bigsk1.github.io"
 url: "https://bigsk1.com"
