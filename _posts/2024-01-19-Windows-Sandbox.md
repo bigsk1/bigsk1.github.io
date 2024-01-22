@@ -2,9 +2,10 @@
 title: Windows Sandbox
 date: 2024-1-19 05:00:00  -500
 categories: [windows]
-tags: [windows,docs] 
+tags: [windows,docs]
 image:
   path: /assets/images/headers/windows_sandbox.webp
+  alt: Windows Sandbox logo
 ---
 
 
