@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Windows Sandbox
 date: 2024-1-19 05:00:00  -500
 categories: [windows]
