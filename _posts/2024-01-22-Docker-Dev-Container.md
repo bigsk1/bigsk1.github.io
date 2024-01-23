@@ -34,7 +34,7 @@ Example Projects
 
 - Using linux or Windows with Nvidia RTX GPU and want a dev enviroment
 - Install projects like Stable Diffusion, ComfyUI, Oobabooga Text Gen Webui or other GPU required local LLM in isolation
-- Looking to build using Python, Node.js and might want to be able to use your Nvidia GPU on projects and want an isolated enviroment, one that can be removed and another start quickly. 
+- Looking to build using Python, Node.js and might want to be able to use your Nvidia GPU on projects and want an isolated enviroment, one that can be removed and another started quickly. 
 - Music or Voice generation using GPU acceleration, like MusicGen, AudioGen, Bark or Whisper
 
 ## Works well with
@@ -53,36 +53,36 @@ So I am going to show a Dockerfile I use as a general purpose work enviroment. I
 
 Base Image: NVIDIA CUDA on Ubuntu
 
-    NVIDIA CUDA Toolkit: Your Docker image is based on an NVIDIA CUDA image (nvidia/cuda:12.3.1-devel-ubuntu22.04), which includes the CUDA Toolkit. CUDA (Compute Unified Device Architecture) is a parallel computing platform and API model created by NVIDIA. It allows software developers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing (an approach termed GPGPU, General-Purpose computing on Graphics Processing Units).
-    Ubuntu 22.04: This is a Linux distribution based on Debian, known for its reliability and ease of use. It's a popular choice for development environments.
+-    NVIDIA CUDA Toolkit: Your Docker image is based on an NVIDIA CUDA image (nvidia/cuda:12.3.1-devel-ubuntu22.04), which includes the CUDA Toolkit. CUDA (Compute Unified Device Architecture) is a parallel computing platform and API model created by NVIDIA. It allows software developers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing (an approach termed GPGPU, General-Purpose computing on Graphics Processing Units).
+-    Ubuntu 22.04: This is a Linux distribution based on Debian, known for its reliability and ease of use. It's a popular choice for development environments.
 
 Programming Languages and Tools
 
-    Python 3.11: A high-level, interpreted programming language known for its readability and wide range of applications in web development, data science, artificial intelligence, and more.
-    Node.js: An open-source, cross-platform, back-end JavaScript runtime environment that executes JavaScript code outside a web browser.
-    JupyterLab: An interactive development environment for Jupyter notebooks, code, and data. It's widely used in data science for its ease of plotting and data manipulation.
+-    Python 3.11: A high-level, interpreted programming language known for its readability and wide range of applications in web development, data science, artificial intelligence, and more.
+-    Node.js: An open-source, cross-platform, back-end JavaScript runtime environment that executes JavaScript code outside a web browser.
+-    JupyterLab: An interactive development environment for Jupyter notebooks, code, and data. It's widely used in data science for its ease of plotting and data manipulation.
 
 Development Tools
 
-    Git: A distributed version-control system for tracking changes in source code during software development.
-    Curl: A command-line tool for transferring data with URLs, used in scripts or for testing APIs.
-    Vim and Nano: Text editors in the Linux environment. Vim is known for its efficiency and powerful features, while Nano is appreciated for its simplicity.
+-    Git: A distributed version-control system for tracking changes in source code during software development.
+-    Curl: A command-line tool for transferring data with URLs, used in scripts or for testing APIs.
+-    Vim and Nano: Text editors in the Linux environment. Vim is known for its efficiency and powerful features, while Nano is appreciated for its simplicity.
 
 Additional Packages
 
-    Build-Essential: A package that includes compilers and libraries essential for compiling software. It typically includes GCC/g++, make, and other utilities.
-    FFmpeg: A complete, cross-platform solution to record, convert, and stream audio and video.
+-    Build-Essential: A package that includes compilers and libraries essential for compiling software. It typically includes GCC/g++, make, and other utilities.
+-    FFmpeg: A complete, cross-platform solution to record, convert, and stream audio and video.
 
 Configuration
 
-    Timezone Setting: You can set the timezone to your preferred region, which is important for logs, scheduled tasks, and time-sensitive applications.
+-    Timezone Setting: You can set the timezone to your preferred region, which is important for logs, scheduled tasks, and time-sensitive applications.
 
 Docker Container Features
 
-    Volume Mounting: The ability to mount a directory from your host machine to the Docker container, ensuring data persistence and easy file access.
-    Port Mapping: Exposing specific ports for services like JupyterLab to be accessible from the host machine.
+-    Volume Mounting: The ability to mount a directory from your host machine to the Docker container, ensuring data persistence and easy file access.
+-    Port Mapping: Exposing specific ports for services like JupyterLab to be accessible from the host machine.
 
-Overall
+## Dockerfile
 
 This Docker image provides a robust, isolated development environment with support for GPU-accelerated applications, making it ideal for a wide range of projects from web development to machine learning. With the inclusion of JupyterLab, it's also well-suited for interactive data exploration and analysis.
 
@@ -163,7 +163,7 @@ Next, you build a Docker image from your Dockerfile. This image is like a snapsh
 docker build -t dev_work .
 ```
 
-Use this command to start the container and keep it running. Make sure to add your correct path to your workspace folder. type pwd in your terminal if unsure.
+Use this command to start the container and keep it running. Make sure to add your correct path to your workspace folder. Type pwd in your terminal if unsure.
 
 ```bash
 docker run -it \
@@ -176,7 +176,7 @@ docker run -it \
            tail -f /dev/null
 ```
 
-To get inside the container and run a jupyter notebook server if you want use the below command
+To get inside the container and run 
 
 ```bash
 docker exec -it dev_work_container /bin/bash
@@ -184,17 +184,19 @@ docker exec -it dev_work_container /bin/bash
 
 That's it your in, find your workspace folder and inside you can make a new folder for each project you like to work on, also you can just run another container from same image just change the name of it in docker run command like dev_work_container2 , ect.. 
 
+When inside the container if you want to use a jupyter notebook server use the below command
+
 ```bash
 jupyter-lab --ip=0.0.0.0 --allow-root --NotebookApp.token='' --port=8888
 ```
 
-I like to use the above because I can use Docker Desktop on windows to stop and start the container at anytime, like only when I want to use it, and the jupyter service isn't running full time. Also when you stop the jupyter service your container doesn't stop. You don't need jupyter is optional and up to you.
+I like to use the above because I can use Docker Desktop on windows to stop and start the container at anytime, like only when I want to use it, and the jupyter service isn't running full time. Also when you stop the jupyter service your container doesn't stop. You don't need jupyter it is optional and up to you but can come in handy running cells. 
 
 ## Open in VSCode 
 
-Install the Microsoft Remote Development. Then ctl+shift+P and type in Dev Containers: Attach to running container. Boom your in.
+Install the Microsoft Remote Development extention pack. Then ctl+shift+P and type in:  Dev Containers: Attach to running container. Boom your in.
 
-Inside the dev_work container type nvidia-smi you should see something similar
+Inside the dev_work container type nvidia-smi you should see something similar to let you know your GPU is available to be used.
 
 ```bash
 +---------------------------------------------------------------------------------------+
@@ -218,3 +220,20 @@ Inside the dev_work container type nvidia-smi you should see something similar
 +---------------------------------------------------------------------------------------+
 
 ```
+
+If you don't see the above make sure your host has the latest Nvidia drivers 
+
+CUDA Toolkit in the Container: The CUDA Toolkit, included in the NVIDIA Docker image, is a collection of tools, libraries, and APIs that enable developers to create software that can perform computations on the GPU. This toolkit inside the container works seamlessly with the host's NVIDIA drivers.
+
+Here is a breakdown of the Nvidia Image that is used when building this Dockerfile:
+
+-    CUDA Toolkit: This is the primary feature of the image. The CUDA Toolkit includes the CUDA runtime and development libraries needed to develop CUDA-enabled applications. It's essential for writing and running software that directly interfaces with the GPU for parallel processing tasks.
+
+-    cuDNN (CUDA Deep Neural Network Library): Some of the NVIDIA CUDA images include cuDNN, which is a GPU-accelerated library for deep neural networks. cuDNN is used extensively in deep learning frameworks like TensorFlow and PyTorch.
+
+-    Other CUDA Libraries: Depending on the specific image, it might also include additional CUDA libraries like cuBLAS (for linear algebra operations), cuFFT (for Fast Fourier Transforms), and others. These libraries provide optimized GPU implementations of standard algorithms which are widely used in scientific computing and machine learning.
+
+-    Compatibility with NVIDIA Drivers: These images are designed to work with the NVIDIA drivers installed on your host machine. The container uses the host's GPU resources through NVIDIA's runtime and drivers.
+
+You can always search for another type of Nvidia Image on the hub and replace it in the Dockerfile!  [https://hub.docker.com/r/nvidia/cuda/tags](https://hub.docker.com/r/nvidia/cuda/tags)
+
