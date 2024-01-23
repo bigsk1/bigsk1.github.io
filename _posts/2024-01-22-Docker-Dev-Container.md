@@ -3,7 +3,7 @@ layout: post
 title: Docker for AI Development
 date: 2024-1-22 05:00:00  -500
 categories: [docker]
-tags: [windows,linux,ai,docker,docs]
+tags: [windows,wsl,linux,ai,docker,docs]
 image:
   path: /assets/images/headers/docker_dev.webp
   alt: Docker Developement AI Logo
@@ -32,7 +32,7 @@ Example Projects
 
 ## Who is this for?
 
-- Using linux or Windows with Nvidia RTX GPU and want a dev enviroment
+- Using linux or Windows (wsl) with Nvidia RTX GPU and want a dev enviroment
 - Install projects like Stable Diffusion, ComfyUI, Oobabooga Text Gen Webui or other GPU required local LLM in isolation
 - Looking to build using Python, Node.js and might want to be able to use your Nvidia GPU on projects and want an isolated enviroment, one that can be removed and another started quickly. 
 - Music or Voice generation using GPU acceleration, like MusicGen, AudioGen, Bark or Whisper
@@ -59,7 +59,7 @@ Base Image: NVIDIA CUDA on Ubuntu
 
 Programming Languages and Tools
 
--    Python 3.11: A high-level, interpreted programming language known for its readability and wide range of applications in web development, data science, artificial intelligence, and more.
+-    Python 3.11: A high-level, interpreted programming language known for its readability and wide range of applications in web development, data science, artificial intelligence, and more. Also includes the nightly pytorch version 12.1
 -    Node.js: An open-source, cross-platform, back-end JavaScript runtime environment that executes JavaScript code outside a web browser.
 -    JupyterLab: An interactive development environment for Jupyter notebooks, code, and data. It's widely used in data science for its ease of plotting and data manipulation.
 
@@ -95,7 +95,6 @@ FROM nvidia/cuda:12.3.1-devel-ubuntu22.04
 ENV TZ=America/Los_Angeles
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-
 # Install necessary packages
 RUN apt-get update && apt-get install -y \
     software-properties-common \
@@ -126,12 +125,14 @@ RUN wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tar.xz && \
     make -j 8 && \
     make altinstall
 
-# Set the working directory
-WORKDIR /workspace
+# Upgrade pip for Python 3.11
+RUN python3.11 -m pip install --upgrade pip
+
+# Install PyTorch
+RUN python3.11 -m pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu121
 
 # Install additional Python tools
-RUN python3.11 -m pip install --upgrade pip && \
-    python3.11 -m pip install jupyterlab
+RUN python3.11 -m pip install jupyterlab
 
 # Install Node.js (Current Version)
 RUN curl -fsSL https://deb.nodesource.com/setup_current.x | bash - && \
@@ -140,17 +141,17 @@ RUN curl -fsSL https://deb.nodesource.com/setup_current.x | bash - && \
 # Install code-server (VSCode server) - optional if using Remote - Containers
 # RUN curl -fsSL https://code-server.dev/install.sh | sh
 
+# Clean up APT when done
 RUN apt-get update && apt-get upgrade -y && apt-get clean && rm -rf /var/lib/apt/lists/*
 
+# Set the working directory
+WORKDIR /workspace
 
 # Set up JupyterLab (optional, but useful for a dev environment)
 EXPOSE 8888
 
 # Expose port for code-server (optional)
 # EXPOSE 8080
-
-# Start vs-code-server by default (optional)
-# CMD ["code-server", "--bind-addr", "0.0.0.0:8080", "--auth", "none"]
 
 # Default command (can be overridden)
 CMD ["/bin/bash"]
@@ -237,4 +238,36 @@ Here is a breakdown of the Nvidia Image that is used when building this Dockerfi
 -    Compatibility with NVIDIA Drivers: These images are designed to work with the NVIDIA drivers installed on your host machine. The container uses the host's GPU resources through NVIDIA's runtime and drivers.
 
 You can always search for another type of Nvidia Image on the hub and replace it in the Dockerfile!  [https://hub.docker.com/r/nvidia/cuda/tags](https://hub.docker.com/r/nvidia/cuda/tags)
+
+## Pytorch usage
+
+** If you want to use pytorch switch to python 3.11.0, image comes with Nvidia's built in python 3.10.12 but pytorch does not work with it, by switching to the one we built from source 3.11.0 it works. This is easy to do in vscode.
+
+To test you can use in jupyter notebook or in terminal in your contrainer 
+"python" and then paste the code
+
+```python
+import torch
+print("PyTorch Version:", torch.__version__)
+print("CUDA Available:", torch.cuda.is_available())
+print("CUDA Version:", torch.version.cuda)
+print("Number of GPUs:", torch.cuda.device_count())
+```
+You should get back if working correctly
+
+- PyTorch Version: 2.3.0.dev20240122+cu121
+- CUDA Available: True
+- CUDA Version: 12.1
+- Number of GPUs: 1
+
+
+```python
+import torch
+print("PyTorch Version:", torch.__version__)
+print("CUDA Available:", torch.cuda.is_available())
+print("CUDA Version:", torch.version.cuda)
+print("Number of GPUs:", torch.cuda.device_count())
+```
+- 12.1
+- True
 
