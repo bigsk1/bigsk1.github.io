@@ -27,7 +27,7 @@ Example Projects
 
 ---
 
-> *Note: Create a folder that we will use to map from your host computer to inside the docker container. So when you are working inside the container it can be saved inside this mapped folder, the examples below we call it workspace*
+> *Note: Create a folder that we will use to map from your host computer to inside the docker container. So when you are working inside the container your work can be saved inside this mapped folder, the examples below we call it workspace*
 {: .prompt-info }
 
 ## Who is this for?
@@ -36,10 +36,11 @@ Example Projects
 - Install projects like Stable Diffusion, ComfyUI, Oobabooga Text Gen Webui or other GPU required local LLM in isolation
 - Looking to build using Python, Node.js and might want to be able to use your Nvidia GPU on projects and want an isolated enviroment, one that can be removed and another started quickly. 
 - Music or Voice generation using GPU acceleration, like MusicGen, AudioGen, Bark or Whisper
+- Building an AI App with AI Agents doing tasks on your file system, keep em caged up so they don't mess something up.
 
 ## Works well with
 
-- VScode  (you can comment out the code server in Dockerfile to add running locally or use your own vscode with it) 
+- VScode  - you can comment out the vs-code server in Dockerfile to add a locally running web based version or use your own vscode with it 
 - Docker Desktop to manage image and container. 
 - Portainer, Dockage or other docker managment systems
 - In WSL Ubuntu or Debian
