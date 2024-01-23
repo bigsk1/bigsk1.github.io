@@ -1,0 +1,220 @@
+---
+layout: post
+title: Docker for AI Development
+date: 2024-1-22 05:00:00  -500
+categories: [docker]
+tags: [windows,linux,ai,docker,docs]
+image:
+  path: /assets/images/headers/docker_dev.webp
+  alt: Docker Developement AI Logo
+---
+
+## Docker-Based Nvidia / Python / Node Development Environment
+
+Docker is an amazing tool that lets you create isolated environments called "containers" for your development projects. Think of it like having a tiny, fully-functional computer inside your main computer where you can play around, build things, and not worry about messing up your main system.
+Why Use Docker for Development?
+
+-    Isolation: Each project can have its own environment with specific tools and versions, without affecting other projects.
+-   Consistency: The environment is consistent, so it works the same way on everyone's computer.
+-    Simplicity: Easy to share and replicate environments, making collaboration smoother.
+-    Safety: Experiment without risking your main system.
+
+Example Projects
+
+-    Web Development: Perfect for building web apps using technologies like Node.js, Python Flask, or Ruby on Rails.
+-    Data Science: Great for data projects using Jupyter Notebooks with Python, R, or Julia.
+-    Machine Learning: Ideal for machine learning projects using TensorFlow, PyTorch, and CUDA for GPU support.
+
+---
+
+> *Note: Create a folder that we will use to map from your host computer to inside the docker container. So when you are working inside the container it can be saved inside this mapped folder, the examples below we call it workspace*
+{: .prompt-info }
+
+## Who is this for?
+
+- Using linux or Windows with Nvidia RTX GPU and want a dev enviroment
+- Install projects like Stable Diffusion, ComfyUI, Oobabooga Text Gen Webui or other GPU required local LLM in isolation
+- Looking to build using Python, Node.js and might want to be able to use your Nvidia GPU on projects and want an isolated enviroment, one that can be removed and another start quickly. 
+- Music or Voice generation using GPU acceleration, like MusicGen, AudioGen, Bark or Whisper
+
+## Works well with
+
+- VScode  (you can comment out the code server in Dockerfile to add running locally or use your own vscode with it) 
+- Docker Desktop to manage image and container. 
+- Portainer, Dockage or other docker managment systems
+- In WSL Ubuntu or Debian
+
+
+##  Create a Dockerfile
+
+So I am going to show a Dockerfile I use as a general purpose work enviroment. It is for those using Nvidia GPU's and any kind of AI work like with Stable Diffusion or running a local LLM. This container is about 20GB so just be aware. Also change the ENV timezone to your timezone in the Dockerfile 
+
+### What does this Dockerfile do?
+
+Base Image: NVIDIA CUDA on Ubuntu
+
+    NVIDIA CUDA Toolkit: Your Docker image is based on an NVIDIA CUDA image (nvidia/cuda:12.3.1-devel-ubuntu22.04), which includes the CUDA Toolkit. CUDA (Compute Unified Device Architecture) is a parallel computing platform and API model created by NVIDIA. It allows software developers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing (an approach termed GPGPU, General-Purpose computing on Graphics Processing Units).
+    Ubuntu 22.04: This is a Linux distribution based on Debian, known for its reliability and ease of use. It's a popular choice for development environments.
+
+Programming Languages and Tools
+
+    Python 3.11: A high-level, interpreted programming language known for its readability and wide range of applications in web development, data science, artificial intelligence, and more.
+    Node.js: An open-source, cross-platform, back-end JavaScript runtime environment that executes JavaScript code outside a web browser.
+    JupyterLab: An interactive development environment for Jupyter notebooks, code, and data. It's widely used in data science for its ease of plotting and data manipulation.
+
+Development Tools
+
+    Git: A distributed version-control system for tracking changes in source code during software development.
+    Curl: A command-line tool for transferring data with URLs, used in scripts or for testing APIs.
+    Vim and Nano: Text editors in the Linux environment. Vim is known for its efficiency and powerful features, while Nano is appreciated for its simplicity.
+
+Additional Packages
+
+    Build-Essential: A package that includes compilers and libraries essential for compiling software. It typically includes GCC/g++, make, and other utilities.
+    FFmpeg: A complete, cross-platform solution to record, convert, and stream audio and video.
+
+Configuration
+
+    Timezone Setting: You can set the timezone to your preferred region, which is important for logs, scheduled tasks, and time-sensitive applications.
+
+Docker Container Features
+
+    Volume Mounting: The ability to mount a directory from your host machine to the Docker container, ensuring data persistence and easy file access.
+    Port Mapping: Exposing specific ports for services like JupyterLab to be accessible from the host machine.
+
+Overall
+
+This Docker image provides a robust, isolated development environment with support for GPU-accelerated applications, making it ideal for a wide range of projects from web development to machine learning. With the inclusion of JupyterLab, it's also well-suited for interactive data exploration and analysis.
+
+```dockerfile
+# Use an NVIDIA CUDA developer image based on Ubuntu 22.04
+FROM nvidia/cuda:12.3.1-devel-ubuntu22.04
+
+# Set the timezone to America/Los_Angeles
+ENV TZ=America/Los_Angeles
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+
+# Install necessary packages
+RUN apt-get update && apt-get install -y \
+    software-properties-common \
+    build-essential \
+    git \
+    curl \
+    vim \
+    nano \
+    wget \
+    libffi-dev \
+    libssl-dev \
+    libbz2-dev \
+    libreadline-dev \
+    libsqlite3-dev \
+    llvm \
+    xz-utils \
+    tk-dev \
+    libncurses5-dev \
+    libncursesw5-dev \
+    zlib1g-dev \
+    ffmpeg # Adding FFmpeg
+
+# Install Python 3.11 from source
+RUN wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tar.xz && \
+    tar -xf Python-3.11.0.tar.xz && \
+    cd Python-3.11.0 && \
+    ./configure --enable-optimizations && \
+    make -j 8 && \
+    make altinstall
+
+# Set the working directory
+WORKDIR /workspace
+
+# Install additional Python tools
+RUN python3.11 -m pip install --upgrade pip && \
+    python3.11 -m pip install jupyterlab
+
+# Install Node.js (Current Version)
+RUN curl -fsSL https://deb.nodesource.com/setup_current.x | bash - && \
+    apt-get install -y nodejs
+
+# Install code-server (VSCode server) - optional if using Remote - Containers
+# RUN curl -fsSL https://code-server.dev/install.sh | sh
+
+RUN apt-get update && apt-get upgrade -y && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+
+# Set up JupyterLab (optional, but useful for a dev environment)
+EXPOSE 8888
+
+# Expose port for code-server (optional)
+# EXPOSE 8080
+
+# Start vs-code-server by default (optional)
+# CMD ["code-server", "--bind-addr", "0.0.0.0:8080", "--auth", "none"]
+
+# Default command (can be overridden)
+CMD ["/bin/bash"]
+```
+
+##  Build Your Docker Image
+
+Next, you build a Docker image from your Dockerfile. This image is like a snapshot of your environment. Run the command in the same directory as your Dockerfile
+
+```bash
+docker build -t dev_work .
+```
+
+Use this command to start the container and keep it running. Make sure to add your correct path to your workspace folder. type pwd in your terminal if unsure.
+
+```bash
+docker run -it \
+           --gpus all \
+           --name dev_work_container \
+           --restart unless-stopped \
+           -v /home/path/to/your/workspace:/workspace \
+           -p 8888:8888 \
+           dev_work \
+           tail -f /dev/null
+```
+
+To get inside the container and run a jupyter notebook server if you want use the below command
+
+```bash
+docker exec -it dev_work_container /bin/bash
+```
+
+That's it your in, find your workspace folder and inside you can make a new folder for each project you like to work on, also you can just run another container from same image just change the name of it in docker run command like dev_work_container2 , ect.. 
+
+```bash
+jupyter-lab --ip=0.0.0.0 --allow-root --NotebookApp.token='' --port=8888
+```
+
+I like to use the above because I can use Docker Desktop on windows to stop and start the container at anytime, like only when I want to use it, and the jupyter service isn't running full time. Also when you stop the jupyter service your container doesn't stop. You don't need jupyter is optional and up to you.
+
+## Open in VSCode 
+
+Install the Microsoft Remote Development. Then ctl+shift+P and type in Dev Containers: Attach to running container. Boom your in.
+
+Inside the dev_work container type nvidia-smi you should see something similar
+
+```bash
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 545.37.02              Driver Version: 546.65       CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA GeForce RTX 4090        On  | 00000000:01:00.0  On |                  Off |
+|  0%   38C    P8              20W / 450W |   1239MiB / 24564MiB |      1%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+
+```
