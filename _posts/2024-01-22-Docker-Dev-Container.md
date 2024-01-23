@@ -263,10 +263,8 @@ You should get back if working correctly
 
 ```python
 import torch
-print("PyTorch Version:", torch.__version__)
-print("CUDA Available:", torch.cuda.is_available())
-print("CUDA Version:", torch.version.cuda)
-print("Number of GPUs:", torch.cuda.device_count())
+print(torch.version.cuda)
+print(torch.cuda.is_available())
 ```
 - 12.1
 - True
