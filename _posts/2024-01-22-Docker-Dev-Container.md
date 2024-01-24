@@ -128,6 +128,10 @@ RUN wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tar.xz && \
 # Upgrade pip for Python 3.11
 RUN python3.11 -m pip install --upgrade pip
 
+# Set Python 3.11.0 as the default Python version
+RUN ln -sf /usr/local/bin/python3.11 /usr/bin/python3 && \
+    ln -sf /usr/local/bin/python3.11 /usr/bin/python
+
 # Install PyTorch
 RUN python3.11 -m pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu121
 
@@ -241,7 +245,7 @@ You can always search for another type of Nvidia Image on the hub and replace it
 
 ## Pytorch usage
 
-** If you want to use pytorch switch to python 3.11.0, image comes with Nvidia's built in python 3.10.12 but pytorch does not work with it, by switching to the one we built from source 3.11.0 it works. This is easy to do in vscode.
+** During the image build we switch to using Python 3.11.0 instead of Nvidia's prebuilt image with python 3.10.12. However you have the option to use python 3.10.12 also if you like however in testing pytorch doesn't seem to work with it so by default we enabled 3.11.0.
 
 To test you can use in jupyter notebook or in terminal in your contrainer 
 "python" and then paste the code
@@ -269,3 +273,68 @@ print(torch.cuda.is_available())
 - 12.1
 - True
 
+You can also make a python file call pytorch_test.py
+
+
+```python
+# pytorch_test.py
+import torch
+
+def test_pytorch_cuda():
+    # Check if CUDA is available
+    if torch.cuda.is_available():
+        print("CUDA is available. Testing with a simple operation.")
+
+        # Create a random tensor
+        x = torch.rand(5, 3)
+        print("Original Tensor:\n", x)
+
+        # Move the tensor to GPU
+        x = x.cuda()
+        print("Tensor on CUDA:\n", x)
+
+        # Perform a simple addition operation
+        y = x + 1
+        print("Tensor after addition:\n", y)
+
+        print("PyTorch and CUDA are working correctly!")
+    else:
+        print("CUDA is not available. Please check your installation.")
+
+if __name__ == "__main__":
+    test_pytorch_cuda()
+```
+and running the command
+
+```bash
+python3 pytorch_test.py
+```
+
+```bash
+CUDA is available. Testing with a simple operation.
+Original Tensor:
+ tensor([[0.8696, 0.6349, 0.9674],
+        [0.4257, 0.2892, 0.3230],
+        [0.9859, 0.4811, 0.2655],
+        [0.2030, 0.1596, 0.3838],
+        [0.9341, 0.3455, 0.1313]])
+Tensor on CUDA:
+ tensor([[0.8696, 0.6349, 0.9674],
+        [0.4257, 0.2892, 0.3230],
+        [0.9859, 0.4811, 0.2655],
+        [0.2030, 0.1596, 0.3838],
+        [0.9341, 0.3455, 0.1313]], device='cuda:0')
+Tensor after addition:
+ tensor([[1.8696, 1.6349, 1.9674],
+        [1.4258, 1.2892, 1.3230],
+        [1.9859, 1.4811, 1.2655],
+        [1.2030, 1.1596, 1.3838],
+        [1.9341, 1.3455, 1.1313]], device='cuda:0')
+PyTorch and CUDA are working correctly!
+```
+
+
+
+## Github
+
+[https://github.com/bigsk1/dev_work](https://github.com/bigsk1/dev_work)
