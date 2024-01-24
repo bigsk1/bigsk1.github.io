@@ -333,6 +333,20 @@ Tensor after addition:
 PyTorch and CUDA are working correctly!
 ```
 
+## Tensorflow
+
+[https://www.tensorflow.org/install/pip](https://www.tensorflow.org/install/pip)
+
+If needed you can install tensorflow with GPU use 
+
+```bash
+pip install tensorflow
+```
+and then check was installed correctly
+
+```bash
+python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+```
 
 
 ## Github
