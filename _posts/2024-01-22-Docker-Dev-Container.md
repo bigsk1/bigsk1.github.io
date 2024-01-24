@@ -5,7 +5,7 @@ date: 2024-1-22 05:00:00  -500
 categories: [docker]
 tags: [windows,wsl,linux,ai,docker,docs]
 image:
-  path: /assets/images/headers/docker_dev.webp
+  path: /assets/images/headers/dockerdev.webp
   alt: Docker Developement AI Logo
 ---
 
