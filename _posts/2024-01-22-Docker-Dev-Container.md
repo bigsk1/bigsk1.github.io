@@ -9,7 +9,7 @@ image:
   alt: Docker Developement AI Logo
 ---
 
-## Docker-Based Nvidia / Python / Node Development Environment
+## Docker-Based Nvidia / Python / Node Development Environment 💻
 
 Docker is an amazing tool that lets you create isolated environments called "containers" for your development projects. Think of it like having a tiny, fully-functional computer inside your main computer where you can play around, build things, and not worry about messing up your main system.
 Why Use Docker for Development?
