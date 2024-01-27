@@ -7,34 +7,35 @@
   <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
 
   {%- capture seo_tags -%}
-      {% seo title=false %}
+    {% seo title=false %}
   {%- endcapture -%}
 
   {% assign img_url = '' %}
 
+  <!-- Determine the appropriate image URL -->
   {% if page.image %}
-      {% assign src = page.image.path | default: page.image %}
-      {% unless src contains '://' %}
-          {%- capture img_url -%}
-              {% include img-url.html src=src img_path=page.img_path %}
-          {%- endcapture -%}
-      {% endunless %}
+    {% assign src = page.image.path | default: page.image %}
+    {% unless src contains '://' %}
+        {%- capture img_url -%}
+            {{ site.url }}{% include img-url.html src=src img_path=page.img_path %}
+        {%- endcapture -%}
+    {% endunless %}
   {% elsif site.social_preview_image %}
-      {%- capture img_url -%}
-          {% include img-url.html src=site.social_preview_image %}
-      {%- endcapture -%}
+    {%- capture img_url -%}
+        {{ site.url }}{% include img-url.html src=site.social_preview_image %}
+    {%- endcapture -%}
   {% endif %}
 
-  <!-- Setup Open Graph and Twitter Card image meta tags -->
+  <!-- Setup Open Graph and Twitter Card image meta tags if an image URL is available -->
   {% if img_url != '' %}
-      {%- capture og_image -%}
-          <meta property="og:image" content="{{ img_url }}" />
-          <meta name="twitter:image" content="{{ img_url }}" />
-      {%- endcapture -%}
+    {%- capture og_image -%}
+        <meta property="og:image" content="{{ img_url }}" />
+        <meta name="twitter:image" content="{{ img_url }}" />
+    {%- endcapture -%}
 
-      {% assign old_meta_clip = '<meta name="twitter:card"' %}
-      {% assign new_meta_clip = og_image | append: old_meta_clip %}
-      {% assign seo_tags = seo_tags | replace: old_meta_clip, new_meta_clip %}
+    {% assign old_meta_clip = '<meta name="twitter:card"' %}
+    {% assign new_meta_clip = og_image | append: old_meta_clip %}
+    {% assign seo_tags = seo_tags | replace: old_meta_clip, new_meta_clip %}
   {% endif %}
 
   {{ seo_tags }}
@@ -97,4 +98,4 @@
     {% endunless %}
   
     {% include metadata-hook.html %}
-  </head>
+</head>
