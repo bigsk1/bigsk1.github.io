@@ -1,43 +1,43 @@
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-  
-    {%- capture seo_tags -%}
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+
+  {%- capture seo_tags -%}
       {% seo title=false %}
-    {%- endcapture -%}
-  
-    <!-- Setup Open Graph image -->
-    {% if page.image %}
+  {%- endcapture -%}
+
+  {% assign img_url = '' %}
+
+  {% if page.image %}
       {% assign src = page.image.path | default: page.image %}
       {% unless src contains '://' %}
-        {%- capture img_url -%}
-          {{ src | absolute_url }}
-        {%- endcapture -%}
-  
-        {% assign old_meta_clip = '<meta name="twitter:card"' %}
-        {% assign new_meta_clip = og_image | append: old_meta_clip %}
-        {% assign seo_tags = seo_tags | replace: old_meta_clip, new_meta_clip %}
+          {%- capture img_url -%}
+              {% include img-url.html src=src img_path=page.img_path %}
+          {%- endcapture -%}
       {% endunless %}
-    {% elsif site.social_preview_image %}
+  {% elsif site.social_preview_image %}
       {%- capture img_url -%}
-        {{ site.social_preview_image | absolute_url }}
+          {% include img-url.html src=site.social_preview_image %}
       {%- endcapture -%}
-  
+  {% endif %}
+
+  <!-- Setup Open Graph and Twitter Card image meta tags -->
+  {% if img_url != '' %}
       {%- capture og_image -%}
-        <meta property="og:image" content="{{ img_url }}" />
-        <meta name="twitter:image" content="{{ img_url }}" />
+          <meta property="og:image" content="{{ img_url }}" />
+          <meta name="twitter:image" content="{{ img_url }}" />
       {%- endcapture -%}
-  
+
       {% assign old_meta_clip = '<meta name="twitter:card"' %}
       {% assign new_meta_clip = og_image | append: old_meta_clip %}
       {% assign seo_tags = seo_tags | replace: old_meta_clip, new_meta_clip %}
-    {% endif %}
-  
-    {{ seo_tags }}
+  {% endif %}
+
+  {{ seo_tags }}
   
     <title>
       {%- unless page.layout == 'home' -%}
