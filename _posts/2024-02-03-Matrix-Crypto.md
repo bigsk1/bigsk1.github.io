@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Matrix Crypto Terminal
-date: 2024-1-22 05:00:00  -500
+date: 2024-02-03 05:00:00  -500
 categories: [python]
 tags: [windows,linux,bitcoin,crypto,terminal]
 image:
