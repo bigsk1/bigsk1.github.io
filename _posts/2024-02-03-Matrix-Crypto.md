@@ -173,7 +173,7 @@ python matrix_crypto.py [--speed SPEED] [--color COLOR]
 
 ---
 
-{% include embed/youtube.html id='Jmo50IZh6VL8' %}
+{% include embed/youtube.html id='mo50IZh6VL8' %}
 
 ---
 
