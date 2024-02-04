@@ -163,3 +163,18 @@ python matrix_crypto.py [--speed SPEED] [--color COLOR]
 ## Github
 
 [Matrix-Crypto Github](https://github.com/bigsk1/matrix-crypto)
+
+
+{% include embed/youtube.html id='I21_yDeOwpk' %}
+
+---
+
+{% include embed/youtube.html id='cUqM0PKzWeU' %}
+
+---
+
+{% include embed/youtube.html id='Jmo50IZh6VL8' %}
+
+---
+
+{% include embed/youtube.html id='YRX-jYRmNZQ' %}
