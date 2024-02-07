@@ -29,7 +29,7 @@ Features
 - You can see the original image and then newly created image. Right click to save. 
 
 
-{% include embed/youtube.html id='E7h7atfdpRAo' %}
+{% include embed/youtube.html id='Eh7atfdpRAo' %}
 📺 [Watch Video](https://www.youtube.com/watch?v=Eh7atfdpRAo)
 
 
