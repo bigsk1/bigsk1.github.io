@@ -67,4 +67,22 @@ According to a [forum discussion](https://answers.microsoft.com/en-us/windows/fo
 ## Conclusion
 Microsoft's official solution of reinstalling windows is crap and the community-provided methods are not 100% provide to work. Hopefully you bought your microsoft account with a key that could be entered again and it works. I ended up just buying another windows 11 pro license and said the hell with it time is money but reinstalling windows and keeping your personal files might be the only option at this point. Unless you know about this issue ahead of time and doing the disable TPM in bios first trick then you might have to reinstall windows.  
 
+## Update 3/2024
+
+So after updating the bios again and having the samething happen, I dug deeper and found a solution. It was very simple, you can use Microsoft Activation Scripts from github, it activates your Windows 10/11. Reading comments on the microsoft help center the microsoft techs actually have used this to solve such issues. You can find it here
+[https://github.com/massgravel/Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts)
+
+Install Method - Traditional
+
+    Download the file from GitHub or Bitbucket
+    Right-click on the downloaded zip file and extract
+    In the extracted folder, find the folder named All-In-One-Version
+    Run the file named MAS_AIO.cmd
+    SELECT 1
+    You will see the activation options. Follow the on-screen instructions.
+    That's all.
+
+This solved the issue. 
+
+
 
