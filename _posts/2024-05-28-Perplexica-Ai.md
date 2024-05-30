@@ -22,12 +22,9 @@ Perplexica is an AI-powered search engine designed to enhance your search experi
 3. **Community Driven**: Contributions from developers worldwide help shape Perplexica's features and improvements.
 4. **Dynamic Updates**: Perplexica continuously evolves, incorporating user feedback and the latest in AI technology.
 5. **Focus Modes**: Different focus modes allow you to tailor the search engine to your specific needs, whether it's research, casual browsing, or keeping up with trends.
----
-
 
 
 ![Perplexica Search](/assets/images/posts/perplex.webp)
-
 
 
 ## Key Features
@@ -96,6 +93,7 @@ For production environments, you can use Docker to deploy Perplexica easily:
 ### Gluetun and Perplexica 
 
 I was able to get this stack to run and work good, just need to have your VPN providers credentials, then every search or request outside your network is on a VPN.
+
 
 ```yaml
 services:
@@ -167,7 +165,6 @@ networks:
 ```
 
 
-Proxy your searchs
 ## Building from Source
 
 ### Prerequisites
