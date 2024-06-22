@@ -42,7 +42,7 @@ Voice Chat AI is a project that allows you to interact with different AI charact
 
 So I built this AI Speech app you can use either in the terminal or in a webui. You can talk with any character you want to make, it comes with some characters that I have made. You can see all the options to run the app in the .env file. 
 
-More details here: https://github.com/bigsk1/voice-chat-ai
+More details here: [voice-chat-ai-github](https://github.com/bigsk1/voice-chat-ai)
 
 
 
