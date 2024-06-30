@@ -48,16 +48,13 @@ More details here: [voice-chat-ai-github](https://github.com/bigsk1/voice-chat-a
 
 ## Watch the Demos
 
-Webui - OpenAI and Ollama
 
-[![Watch the video](https://img.youtube.com/vi/bgdQkzGltdk/maxresdefault.jpg)](https://youtu.be/bgdQkzGltdk)
-
+[![Watch the video](https://img.youtube.com/vi/Ii3vYg-CzKE/maxresdefault.jpg)](https://youtu.be/Ii3vYg-CzKE)
 
 Click on the thumbnail to open the video☝️
 
----
 
-CLI
+
 
 GPU - 100% local - ollama llama3, xtts-v2
 
@@ -78,11 +75,3 @@ Alien conversation using openai gpt4o and openai speech for tts.
 Click on the thumbnail to open the video☝️
 
 ---
-
-
-Docker - ollama - xtts-v2
-
-[![Watch the video](https://img.youtube.com/vi/wG4-Djicuf4/maxresdefault.jpg)](https://youtu.be/wG4-Djicuf4)
-
-
-Click on the thumbnail to open the video☝️

@@ -60,3 +60,8 @@ Real-time data from the bitcoin mempool. Check your addresses, transactions, UTX
 
 Note: All data and insights are retrieved and interpreted using integrated OpenAPI specifications for up-to-date and accurate information.
 
+## Update 6/28/24
+
+I have built a full standalone app using chainlit you can find it here 
+
+[https://github.com/bigsk1/btc-mempool-ai](https://github.com/bigsk1/btc-mempool-ai)
