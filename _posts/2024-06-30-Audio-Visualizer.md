@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Advanced Music Visualizer
-date: 2024-07-01 05:00:00  -500
+date: 2024-06-30 05:00:00  -500
 categories: [music]
 tags: [javascript,music,audio]
 image:

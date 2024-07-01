@@ -39,8 +39,6 @@ I'm building a resource for passionate makers, driven by curiosity and a shared 
 
 
 
-Starter theme for site was built by jekyll theme chirpy [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
-
 ## License
 
 This work is published under [MIT][mit] License.
