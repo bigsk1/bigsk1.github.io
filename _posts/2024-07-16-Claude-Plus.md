@@ -3,7 +3,7 @@ layout: post
 title: Claude Plus
 date: 2024-07-16 05:00:00  -500
 categories: [docker]
-tags: [python,llm,claude]
+tags: [python,llm,claude,docker,ai]
 image:
   path: /assets/images/headers/claude-plus.webp
   alt: Claude Plus
