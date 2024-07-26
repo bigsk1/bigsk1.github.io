@@ -12,20 +12,18 @@ image:
 
 # Claude Plus : AI-Powered Development Assistant
 
-I bring you yet another AI powered app to help you code and build your own apps better.
+I built an AI development assistant, currently a work in progress but give it a try. 
 
 Claude Plus is an advanced AI-powered development assistant that combines the capabilities of Anthropic's Claude AI with a suite of development tools. It's designed to help developers with various tasks, from coding to project management, all through an interactive chat interface.
 
-This app is in continuous developement and new features are being added. 
 
-
-![Claude-plus](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/a74c4783-5e39-498a-6c43-d53d7dd96c00/public)
+![ClaudePlus](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/41f9c009-7d37-4229-ba5f-3bbd8e4da900/public)
 
 
 ## Features
 
 - 🧠 **Interact with Claude-3.5-Sonnet**: Engage with the advanced AI, ask to build your ideas and code files and folders are made!.
-- 📁 **File System Manipulation**: Claude will create, read, write and delete files and folders seamlessly on your system.
+- 📁 **File System Manipulation**: Claude will create, read, write and delete files and folders seamlessly on your system. The files tab shows date modified and size of files and folders in a list or grid view. 
 - 🔍 **Powerful Search**: Utilize Tavily API or SearXNG to perform comprehensive searches. Claude also has search tool built in.
 - 💡 **Code Snippet Management**: Highlight and manage code snippets efficiently. Have questions about an existing project drop the folder in the projects directory and Claude will have full access. 
 - 📂 **Project Structure Management**: Build and maintain complex project structures with ease.
@@ -34,6 +32,8 @@ This app is in continuous developement and new features are being added.
 - ⚙️ **Automode**: Automate tasks for increased efficiency and productivity. Set max iterations in env and Claude will cycle through that number of times automaticlly. 
 - 🔄 **Iterative Tracking**: Monitor changes and iterations accurately during automode sessions.
 - ✂️ **Diff-Based Editing**: Edit files using diff-based techniques for precise modifications.
+- 💻 **NEW console** feature - You are able to run commands in the UI just like a terminal. Run python scripts within the UI!
+- ⬇️ **NEW download projects folder** You can download the entire projects directory with all your created folders and files directly from the UI now. 
 
 This application leverages the power of Claude to enhance your development workflow, providing robust tools for file management, search, code analysis, and automation.
 
@@ -100,7 +100,7 @@ This application leverages the power of Claude to enhance your development workf
 
    ```
    cd frontend
-   npm start
+   npm run dev
    ```
 
 3. Open your browser and navigate to `http://localhost:5173/`
@@ -116,15 +116,13 @@ Claude Plus offers a powerful suite of features to enhance your development work
 - **Code Generation**: Describe the functionality you need, and Claude will generate code snippets or entire files.
 - **Debugging Assistance**: Paste error messages or problematic code for Claude to analyze and suggest fixes.
 
-![claude](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/f3e51de7-5b42-4634-6afa-3fda6f5eb500/public)
-
 ### 2. File and Image Management
 
 - **File Upload**: Easily upload files for Claude to analyze or work with. All uploaded files are stored in the `projects/uploads` folder.
 - **Image Analysis**: Upload images for Claude to describe and analyze, useful for UI/UX discussions or diagram interpretations.
 - **Code Review**: Upload your code files for Claude to review, suggest improvements, or explain complex sections. It will not only read your files you add but can modify and even delete if requested.
 
-![claude1](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/ba7d095c-35cb-4a88-7fd0-ed63219e6a00/public)
+![claude1](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/e142e52d-f257-4c5e-adbb-a1d1e75ba300/public)
 
 ### 3. Project Structure Management
 
@@ -158,11 +156,14 @@ Claude Plus offers a powerful suite of features to enhance your development work
 ![claude5](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/88df81c1-27b7-4713-1715-228915742600/public)
 
 
-### 6. Code Execution and Testing (Coming Soon)
+### 6. Code Execution and Testing (In Progress)
 
 - **Secure Sandbox**: Run Python scripts directly within the chat interface.
 - **Output Display**: View the results of your code execution inline with your conversation.
 - **Interactive Debugging**: Step through code with Claude's guidance to identify and fix issues.
+
+![console](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/dfc074d4-38c6-42b5-a29c-2d82da457800/public)
+
 
 ### 7. Version Control Integration (Coming Soon)
 
@@ -248,11 +249,6 @@ Once inside the dev container:
 Note: The first time you open the project in the dev container, it may take a few minutes to build. Subsequent loads will be much faster.
 
 
-## Github 
-
-[https://github.com/bigsk1/claude-plus](https://github.com/bigsk1/claude-plus)
-
-
 ## Contributing
 
 We welcome contributions to Claude Plus! This project is in active development, and things may change rapidly and break and be buggy! Here's how you can contribute:
@@ -276,3 +272,7 @@ This project is under active development. Features may change, and there might b
 - Tavily for the search API
 - SearXNG for there privacy focus search
 - For giving me the idea for building a web version based on the ideas of a cli version https://github.com/Doriandarko/claude-engineer
+
+## Github Repo
+
+[https://github.com/bigsk1/claude-plus](https://github.com/bigsk1/claude-plus)
