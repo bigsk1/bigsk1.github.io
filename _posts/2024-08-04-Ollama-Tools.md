@@ -32,7 +32,7 @@ Ollama Tools AI is a work-in-progress project focused on implementing advanced A
 - **DB Similarity**: Every chat and tool use is saved in DB for future context aware AI responses.
 
 
-```env
+```yaml
 # API Keys
 TAVILY_API_KEY=tvly-
 
