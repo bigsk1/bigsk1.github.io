@@ -50,12 +50,11 @@ social:
   # email:              # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://links.thekratomsyndicate.com/      # change to your homepage
+    # change to your homepage
     - https://github.com/bigsk1       # change to your github homepage
     # Uncomment below to add more social links
-    - https://www.facebook.com/kratomsyndicate
     # - https://www.linkedin.com/in/username
-    - https://twitter.com/kratomsyndicate
+    - https://twitter.com/bigsk1_com
 
 google_site_verification: "vurRDdv3RazIE_zO_B_v35Pu6q_9wkfaae9iyGMRRas"            # fill in to your verification string
 
