@@ -95,93 +95,6 @@ Remember: A watched GPU never throttles! 🚀
 
 A real-time lightweight NVIDIA GPU monitoring dashboard built with Docker for easy deployment and cross-platform compatibility.
 
-https://github.com/user-attachments/assets/cd6cbe1f-33f0-47d5-8b30-29e4d08e90b4
-
-
-##  Quick Navigation 🔍
-
-<details>
-  <summary>Features</summary>
-
-  - [Features](#features)
-
-</details>
-
-<details>
-  <summary>Prerequisites</summary>
-
-  - [Prerequisites](#prerequisites)
-
-</details>
-
-<details open>
-  <summary>Quick Start</summary>
-
-  - [Using Pre-built Image](#using-pre-built-image)
-  - [Using Docker Compose](#using-docker-compose)
-
-</details>
-
-<details open>
-  <summary>Installation Prerequisites</summary>
-
-  - [Ubuntu / Debian / WSL](#1-ubuntu--debian--wsl)
-  - [Install NVIDIA Container Toolkit](#2-install-nvidia-container-toolkit)
-  - [Configure Docker with Toolkit](#3-configure-docker-with-toolkit)
-  - [Restart Docker Daemon](#4-restart-docker-daemon)
-  - [Test Installation](#5-test-to-see-if-installed-correctly)
-
-</details>
-
-<details>
-  <summary>Building gpu-monitor from Source</summary>
-
-  - [Clone and Build the Repository](#building-gpu-monitor-from-source)
-
-</details>
-
-<details>
-  <summary>Configuration</summary>
-
-  - [Access the Dashboard](#configuration)
-
-</details>
-
-<details open>
-  <summary>Alternative Setup Method</summary>
-
-  - [Setup Script Instructions](#alternative-setup-method)
-
-</details>
-
-<details>
-  <summary>Data Persistence</summary>
-
-  - [Managing Data Persistence](#data-persistence)
-
-</details>
-
-<details>
-  <summary>Alerts</summary>
-
-  - [Configuring Alerts](#alerts)
-
-</details>
-
-<details>
-  <summary>Troubleshooting</summary>
-
-  - [Common Issues](#common-issues)
-
-</details>
-
-<details>
-  <summary>License</summary>
-
-  - [License](#license)
-
-</details>
-
 
 ## Features
 
@@ -444,14 +357,9 @@ If this failed proceed to [Installation Prerequisites](#installation-prerequisit
 
 ## Mobile Layout
 
-<p align="center">
-  <img src="https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/3b772d51-8bd6-4d77-5147-25b15170a900/public" alt="GPU Monitor Dashboard Mobile Temp" width="300">
-</p>
+![GPU Monitor Dashboard Mobile Temp](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/3b772d51-8bd6-4d77-5147-25b15170a900/public)
 
-<p align="center">
-  <img src="https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/c0176433-9449-4243-d3cf-835c198f5500/public" alt="GPU Monitor Dashboard Mobile Stats" width="300">
-</p>
-
+![GPU Monitor Dashboard Mobile Stats](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/c0176433-9449-4243-d3cf-835c198f5500/public)
 
 ## License
 [![License](https://img.shields.io/github/license/bigsk1/gpu-monitor)](https://github.com/bigsk1/gpu-monitor/blob/main/LICENSE)
