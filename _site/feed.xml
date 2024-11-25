@@ -1,0 +1,175 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>~bigsk1~</title>
+  <subtitle>Doc site for AI, Tech, HomeLab, Crypto and Self Hosted projects</subtitle>
+  <updated>2024-11-25T05:10:11-08:00</updated>
+  <author>
+    <name>bigsk1</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
+  <rights> © 2024 bigsk1 </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Ai Podcast Generator</title>
+    <link href="http://localhost:4000/posts/AI-Podcast/" rel="alternate" type="text/html" title="Ai Podcast Generator" />
+    <published>2024-11-24T09:00:00-08:00</published>
+  
+    <updated>2024-11-24T09:00:00-08:00</updated>
+  
+    <id>http://localhost:4000/posts/AI-Podcast/</id>
+    <content src="http://localhost:4000/posts/AI-Podcast/" />
+    <author>
+      <name>bigsk1</name>
+    </author>
+
+  
+    
+    <category term="ai" />
+    
+  
+
+  <summary>AI Podcast Generator 🎙️
+
+An AI-powered tool that transforms YouTube videos into engaging podcast discussions. Features a modern web interface for easy use and optional CLI functionality. Downloads videos, transcribes them, and generates natural conversations between AI voices discussing the content.
+
+https://github.com/user-attachments/assets/daeb1068-6f63-499c-9790-8ac34a46a140
+
+Features
+
+
+  🎯...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Ollama Tools</title>
+    <link href="http://localhost:4000/posts/Ollama-Tools/" rel="alternate" type="text/html" title="Ollama Tools" />
+    <published>2024-08-04T03:00:00-07:00</published>
+  
+    <updated>2024-08-04T03:00:00-07:00</updated>
+  
+    <id>http://localhost:4000/posts/Ollama-Tools/</id>
+    <content src="http://localhost:4000/posts/Ollama-Tools/" />
+    <author>
+      <name>bigsk1</name>
+    </author>
+
+  
+    
+    <category term="ai" />
+    
+  
+
+  <summary>Ollama Tools Ai
+
+Ollama tools is a side project I am working on to allow ollama models to use tools. What is a tool? A function that allows the AI to do something it navitily can’t like create a folder and file on your locally machine. You can ask the AI to preform a certain task and based on the function you have created enable the AI to preform a task using tools. Some of the newer models lik...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>AI Screen Analyzer</title>
+    <link href="http://localhost:4000/posts/AI-Screen-Analyzer/" rel="alternate" type="text/html" title="AI Screen Analyzer" />
+    <published>2024-07-25T03:00:00-07:00</published>
+  
+    <updated>2024-07-25T03:00:00-07:00</updated>
+  
+    <id>http://localhost:4000/posts/AI-Screen-Analyzer/</id>
+    <content src="http://localhost:4000/posts/AI-Screen-Analyzer/" />
+    <author>
+      <name>bigsk1</name>
+    </author>
+
+  
+    
+    <category term="docker" />
+    
+  
+
+  <summary>AI Screen Analyzer
+
+AI Screen Analyzer is a powerful web application that allows users to capture screenshots, analyze them using various AI providers and models, and engage in conversations about the captured images.
+
+You can capture a website you like and then ask the AI to provide the code to build the same thing.
+
+You can capture any window or full screen ask OpenAI gpt-4o to describe anyth...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Claude Plus</title>
+    <link href="http://localhost:4000/posts/Claude-Plus/" rel="alternate" type="text/html" title="Claude Plus" />
+    <published>2024-07-16T03:00:00-07:00</published>
+  
+    <updated>2024-07-16T03:00:00-07:00</updated>
+  
+    <id>http://localhost:4000/posts/Claude-Plus/</id>
+    <content src="http://localhost:4000/posts/Claude-Plus/" />
+    <author>
+      <name>bigsk1</name>
+    </author>
+
+  
+    
+    <category term="docker" />
+    
+  
+
+  <summary>Claude Plus : AI-Powered Development Assistant
+
+I built an AI development assistant, currently a work in progress but give it a try.
+
+Claude Plus is an advanced AI-powered development assistant that combines the capabilities of Anthropic’s Claude AI with a suite of development tools. It’s designed to help developers with various tasks, from coding to project management, all through an interacti...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Advanced Music Visualizer</title>
+    <link href="http://localhost:4000/posts/Audio-Visualizer/" rel="alternate" type="text/html" title="Advanced Music Visualizer" />
+    <published>2024-06-30T03:00:00-07:00</published>
+  
+    <updated>2024-06-30T03:00:00-07:00</updated>
+  
+    <id>http://localhost:4000/posts/Audio-Visualizer/</id>
+    <content src="http://localhost:4000/posts/Audio-Visualizer/" />
+    <author>
+      <name>bigsk1</name>
+    </author>
+
+  
+    
+    <category term="music" />
+    
+  
+
+  <summary>Advanced Music Visualizer
+
+An advanced, interactive 3D audio visualizer using Three.js and Web Audio API. Transform your music into mesmerizing visual spectacles with a variety of shapes and color schemes. A single html file, just run in your browser.
+
+Live Demo
+
+You can view and interact with the visualizer on Advanced Music Visualizer.
+
+Features
+
+
+  Visualize audio with a variety of shapes an...</summary>
+
+  </entry>
+
+</feed>
+
+
