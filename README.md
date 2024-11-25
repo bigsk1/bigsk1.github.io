@@ -1,37 +1,43 @@
-# Chirpy Starter
+## AI 🤖, Tech 💻, Python 🐍, News 📰, Crypto 🪙 and more 🚀
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+### Welcome 👋
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+A treasure trove of knowledge and inspiration for anyone who believes in the power of hands-on learning and the thrill of building things from scratch. Our mission is to empower individuals with limited programming experience to explore the vast world of technology and unleash their creativity in the process. Our github page is filled with step by step guides to install some amazing apps either on linux or windows, from proxmox tricks to building your own chat bot to small scripts to get things done.
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+---
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
-```
+### Who am I? 🧑‍💻
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+I'm building a resource for passionate makers, driven by curiosity and a shared love for creating innovative projects. All my interests converge on this platform, bringing together a wealth of ideas, experiences, and projects for you to explore and for me to keep track of projects.
 
-## Usage
+---
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
 
-## Contributing
+### Projects cover a wide range of topics, including:
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+- 🛡️ **Privacy Protection**: In today’s digital age, safeguarding your online privacy has never been more crucial. We bring you step-by-step guides on how to enhance your privacy, from setting up VPNs to using secure messaging apps.
+
+- 🖥️ **Self-Hosting**: Break free from the shackles of third-party services by hosting your own applications and websites. Discover our easy-to-follow tutorials on setting up servers, managing domains, and creating your online presence.
+
+- 🛠️ **Building Apps with ChatGPT**: Get acquainted with OpenAI’s powerful language model, and learn how to incorporate it into your projects. From creating conversational AI to generating creative content, we’ll guide you through the process.
+
+- 📚 **Stable Diffusion**: Dive deep into the world of stable diffusion processes and how they can be applied in various fields.
+
+- 🤗 **AI-Related Chat Models**: Explore the intricacies of chat models powered by Artificial Intelligence, and how you can build your own and getting working.
+
+- 🪙 **Bitcoin and Crypto**: Blockchain related tech, news and interesting ideas.
+
+- 👣 **Step to Step guides**: Stay informed and inspired with my selection of interesting topics. Covering a variety of related technology, design, and creativity, my content will help you stay updated and motivated to build your next project.
+
+
+---
+
+[![bigsk1 site](/assets/images/home_page.png)](https://bigsk1.com/)
+
+---
+
+
 
 ## License
 
@@ -39,5 +45,7 @@ This work is published under [MIT][mit] License.
 
 [gem]: https://rubygems.org/gems/jekyll-theme-chirpy
 [chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
+[use-template]: https://github.com/cotes2020/chirpy-starter/generate
 [CD]: https://en.wikipedia.org/wiki/Continuous_deployment
 [mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+[def]: https://github.com/bigsk1/airats/blob/master/images/fish.jpg
