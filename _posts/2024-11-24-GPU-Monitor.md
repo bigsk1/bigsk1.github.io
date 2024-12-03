@@ -353,7 +353,7 @@ If this failed proceed to [Installation Prerequisites](#installation-prerequisit
 
 5. **I don't like the alert sound**
     - Replace the .mp3 in the `sounds` folder and name it alert.mp3
-    - Getting double sounds from notifications, disable windows notifications or disable it in ui.
+    - Getting double sounds from notifications, disable windows notifications or disable it in ui
 
 ## Mobile Layout
 
