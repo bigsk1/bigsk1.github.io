@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Zero Trust Architecture: Building Security for the Modern Enterprise
 date: 2025-02-28 05:11:45 -500
 categories: [technology, general]
