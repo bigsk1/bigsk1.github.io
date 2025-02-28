@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unraveling the Secrets of DNS Privacy
-date: 2023-03-28 12:05:00 -500
+date: 2025-02-22 12:05:00 -500
 categories: [networking, security] 
 tags: [privacy, deep, dive]
 image:
