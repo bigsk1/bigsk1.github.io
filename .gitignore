@@ -25,3 +25,10 @@ package-lock.json
 # Misc
 _sass/vendors
 assets/js/dist
+
+#Custom
+.cursorrules
+.cursor
+
+_templates/*
+CONTRIBUTING.md
