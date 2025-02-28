@@ -118,7 +118,6 @@ Network architecture must evolve to support Zero Trust principles:
 
 
 
-![Network micro-segmentation diagram showing isolated security zones with policy enforcement points between segments](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/13b46af2-9563-4a1d-aee6-ea2e6d998900/public "Zero Trust Micro-segmentation Model")
 
 ### Data Security
 

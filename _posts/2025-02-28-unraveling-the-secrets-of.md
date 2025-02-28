@@ -32,7 +32,6 @@ DNS over TLS establishes a secure connection between the client and the DNS reso
 
 On the other hand, DNS over HTTPS takes a slightly different approach. It encapsulates DNS queries within HTTPS requests, leveraging the security and privacy features of the HTTPS protocol. By using DoH, DNS traffic becomes indistinguishable from regular HTTPS traffic, making it more difficult for network observers to identify and block DNS queries.
 
-![dns](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/dfa4baca-6761-4e7e-5bdc-7e24832bfe00/public)
 
 
 
