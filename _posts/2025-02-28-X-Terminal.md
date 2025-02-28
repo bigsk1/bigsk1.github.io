@@ -1,0 +1,199 @@
+---
+title: X Terminal
+date: 2025-02-28 10:35:00 -500
+categories: [python]
+tags: [python,x,twitter,terminal,social-media]    # Tag should always be in lowercase
+image:
+  path: /assets/images/headers/x-terminal.webp
+---
+
+# X Terminal
+
+A powerful command-line tool for managing X (formerly Twitter) posts - tweet, reply, delete, and upload images directly from your terminal. Built for Python 3.10+ and compatible with both Windows and Linux.
+
+![x-terminal](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/a277f4ed-6911-4848-6c38-9c1cb77dea00/public)
+
+## What Is It?
+
+X Terminal is a cyberpunk-themed CLI tool that lets you interact with the X platform without leaving your terminal. It's perfect for developers, automation enthusiasts, and anyone who prefers command-line interfaces over web browsers.
+
+The tool provides a complete suite of X functionality:
+- Post tweets with text and images
+- Reply to existing tweets
+- Delete your tweets
+- Split long messages into threads automatically
+- Preview posts before sending (dry run)
+
+![x2](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/a56b565b-1808-4fa8-2601-d3a78b230100/public)
+
+## Getting Started
+
+### Prerequisites
+
+Before using X Terminal, you'll need:
+- Python 3.10 or higher
+- A free X Developer account (https://developer.x.com/)
+- X API credentials (consumer key/secret and access tokens)
+
+### Installation
+
+Setting up X Terminal is straightforward:
+
+```bash
+# Install required dependencies
+pip install requests requests-oauthlib rich
+
+# Set up environment variables (in .zshrc, .bashrc, or equivalent)
+export X_CONSUMER_KEY="your_key"
+export X_CONSUMER_SECRET="your_secret"
+export X_ACCESS_TOKEN="your_token"
+export X_ACCESS_TOKEN_SECRET="your_token_secret"
+
+# Apply changes
+source ~/.zshrc
+```
+
+## Command Structure
+
+X Terminal uses a simple command structure:
+
+```bash
+python x.py [global_options] <command> [command_options]
+```
+
+### Global Options
+
+These options work with any command:
+
+- `--verbose`: Shows detailed API responses for debugging
+- `--help` or `-h`: Displays the full help menu with examples
+
+## Core Commands
+
+### Posting to X
+
+The `post` command lets you send tweets with various options:
+
+```bash
+python x.py post "Your message here" [options]
+```
+
+**Options include:**
+- `-i` or `--image-url`: Attach an image via URL (works with Cloudflare Images)
+- `--reply-to`: Specify a tweet ID to reply to
+- `--dry-run`: Preview your post without actually sending it
+
+**Examples:**
+
+```bash
+# Simple post
+python x.py post "Hello from the terminal!"
+
+# Post with an image
+python x.py post "Check out this image!" -i https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/695bc126-614d-4571-908d-5a5173127100/public
+
+# Reply to an existing tweet
+python x.py post "Great point!" --reply-to 1893572351994019980
+
+# Preview a long post that will be split into a thread
+python x.py post "This is a very long message that will automatically be split into multiple tweets forming a thread..." --dry-run
+```
+
+### Deleting Tweets
+
+Remove tweets from your timeline with the `delete` command:
+
+```bash
+python x.py delete <tweet_id> [options]
+```
+
+**Options:**
+- `--no-confirm`: Skip the confirmation prompt
+
+**Examples:**
+
+```bash
+# Delete with confirmation prompt
+python x.py delete 1893529363959947744
+
+# Delete without confirmation
+python x.py delete 1893529363959947744 --no-confirm
+```
+
+### Checking Version
+
+View the current version of X Terminal:
+
+```bash
+python x.py version
+```
+
+![x3](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/a52f31b2-6bd8-4677-549d-3ee8f1a7e700/public)
+
+## Special Features
+
+### Terminal Theme
+
+X Terminal features a distinctive cyberpunk aesthetic with:
+- Neon colors (cyan, magenta, green)
+- Futuristic terminology ("matrix", "transmission", "cyberdeck")
+- Rich terminal formatting for an immersive experience
+
+### Automatic Thread Creation
+
+Messages longer than 280 characters are automatically split into a thread of tweets, with images attached to the first tweet in the sequence.
+
+### Image Support
+
+The tool works seamlessly with image URLs, including Cloudflare Images. It verifies that URLs return proper image content types, even if they lack file extensions.
+
+### Windows Compatibility
+
+While designed to work on both Linux and Windows, X Terminal provides the best experience on Windows when using Windows Terminal for proper emoji support.
+
+## Practical Use Cases
+
+### Social Media Automation
+
+X Terminal is perfect for:
+- Scheduled posts via cron jobs
+- Automated responses to specific events
+- Batch posting of content
+- Integration with other CLI tools and scripts
+
+### Developer Workflows
+
+Integrate X posting into your development workflow:
+- Post build notifications
+- Share project updates
+- Announce releases
+- Monitor and respond to mentions
+
+### Content Creation
+
+Streamline your content creation process:
+- Post directly from your writing environment
+- Share images generated by other tools (like Cloudflare Terminal Image Generator)
+- Maintain a consistent posting schedule
+
+## Technical Implementation
+
+X Terminal is built with Python and leverages several key technologies:
+- **Requests/Requests-OAuthlib**: For secure API communication
+- **Rich**: For beautiful terminal formatting
+- **X API v2**: For all X platform interactions
+- **Environment Variables**: For secure credential storage
+
+## Connect
+
+Follow the developer on X:
+
+[![Follow on X](https://img.shields.io/badge/follow-%40bigsk1_com-1DA1F2?style=for-the-badge&logo=x&logoColor=white)](https://x.com/bigsk1_com)
+
+## Get Started
+
+Ready to try X Terminal? Check out the full project on GitHub:
+
+[https://github.com/bigsk1/x-terminal](https://github.com/bigsk1/x-terminal)
+
+With X Terminal, you can manage your X presence entirely from the command line—no browser required! 
