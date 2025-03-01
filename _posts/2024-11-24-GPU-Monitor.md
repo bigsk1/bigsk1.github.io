@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Nvidia GPU Monitor
 date: 2024-11-24 12:05:00  -500
 categories: [nvidia]

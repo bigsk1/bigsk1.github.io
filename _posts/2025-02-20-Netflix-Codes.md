@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Netflix Codes
 date: 2025-02-20 12:05:00  -500
 categories: [docker]

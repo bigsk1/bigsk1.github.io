@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Ai Podcast Generator
 date: 2024-11-24 12:00:00  -500
 categories: [ai]

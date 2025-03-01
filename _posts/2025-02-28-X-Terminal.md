@@ -1,4 +1,5 @@
 ---
+layout: post
 title: X Terminal
 date: 2025-02-28 10:35:00 -500
 categories: [python]

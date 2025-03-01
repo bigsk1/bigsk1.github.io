@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Cloudflare Terminal Image Generator
 date: 2025-02-28 10:30:00 -500
 categories: [python]

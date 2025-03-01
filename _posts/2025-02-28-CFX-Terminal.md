@@ -1,4 +1,5 @@
 ---
+layout: post
 title: CFX-Terminal - AI-Powered X Client
 date: 2025-02-28 10:40:00 -500
 categories: [web]
