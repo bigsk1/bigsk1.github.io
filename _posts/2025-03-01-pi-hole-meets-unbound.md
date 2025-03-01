@@ -98,6 +98,7 @@ Install Unbound and required utilities:
 ```bash
 apt update
 apt install unbound unbound-anchor dnsutils -y
+```
 
 ### Configuring Unbound
 
