@@ -5,7 +5,7 @@ date: 2025-03-01 01:57:21 -500
 categories: [technology, general]
 tags: [micro-investing, trends, wealth-building]
 image:
-  path: https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/d0ba7a50-8489-4041-663f-4aade554c400/public
+  path: https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/8d548d8b-ef2d-4b7e-d5c6-4c8d9dc84800/public
 ---
 
 ---
