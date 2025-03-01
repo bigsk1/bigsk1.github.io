@@ -127,7 +127,7 @@ I'm planning several enhancements for future versions:
 
 ## Get Started
 
-Ready to try it yourself? Check out the full project on GitHub:
+Ready to try it yourself? Check out the full project on GitHub: https://github.com/bigsk1/terminal-image
 
 
 Follow the setup instructions, and you'll be generating and hosting images from your terminal in minutes! 
