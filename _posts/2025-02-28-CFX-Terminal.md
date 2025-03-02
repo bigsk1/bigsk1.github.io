@@ -27,7 +27,10 @@ The application serves multiple purposes:
 Whether you're a social media professional, content creator, or just someone who wants to enhance their X experience, CFX-Terminal provides tools that go far beyond the standard X web interface.
 
 
-![cfx-terminal2](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/47a5e856-aaeb-40b0-10ea-7fc0d8bf5000/public)
+ {% include embed/youtube.html id='g1C9VbBBKGU' %}
+📺 [Watch Video](https://www.youtube.com/watch?v=g1C9VbBBKGU)
+
+
 
 ## Key Features
 
@@ -55,6 +58,10 @@ Whether you're a social media professional, content creator, or just someone who
 - **Multiple AI Providers**: Choose between OpenAI models (GPT-4o, GPT-4o-mini) or X's own AI (Grok)
 - **Customizable Responses**: Adjust the AI's tone, style, and approach to match your personal brand
 - **Toggle Chat Mode**: Switch between tweet crafting and general AI chat whenever needed
+
+![cfx-terminal2](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/47a5e856-aaeb-40b0-10ea-7fc0d8bf5000/public)
+
+---
 
 ![cfx-terminal3](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/73dd1ed1-41a0-4f02-f0bd-89d8fcec2d00/public)
 
