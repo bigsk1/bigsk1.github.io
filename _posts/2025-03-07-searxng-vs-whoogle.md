@@ -3,7 +3,7 @@ layout: post
 title: SearXNG vs Whoogle
 date: 2025-03-07 01:54:57 -500
 categories: [technology, general]
-tags: [searxng, whoogle, which]
+tags: [searxng, whoogle]
 image:
   path: https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/8b9b5b14-fd79-44e0-9075-484f6d5b9d00/public
 ---
