@@ -36,8 +36,8 @@ Of course, local deployment comes with tradeoffs. You'll need sufficient computi
 Getting started with Ollama is refreshingly straightforward:
 
 1. Download and install Ollama for your operating system
-2. Pull a model with a simple command: `ollama pull llama2`
-3. Start chatting: `ollama run llama2`
+2. Pull a model with a simple command: `ollama pull llama3.1`
+3. Start chatting: `ollama run llama3.1`
 
 Ollama supports numerous models including Llama 2, Mistral, Vicuna, and others. The project handles model management, optimized inference, and provides both CLI and API interfaces. For developers, Ollama's REST API makes integration with other applications seamless.
 
