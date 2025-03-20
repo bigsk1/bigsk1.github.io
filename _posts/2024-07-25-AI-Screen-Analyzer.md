@@ -32,7 +32,7 @@ You can capture any window or full screen ask OpenAI gpt-4o to describe anything
 - **Docker**: Run in docker because we all love docker.
 
 
-![ai-screen](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/33c4e5b3-3722-403a-e877-b6906677e600/public)
+![Image](https://github.com/user-attachments/assets/997bd717-6f7f-4c83-b0aa-395360ea4698)
 
 
 ## Quick Start
@@ -49,7 +49,7 @@ visit http://localhost:3000
 
 Before you begin, ensure you have met the following requirements:
 
-- Node.js (v18.0.0 or later) or just run in docker only
+- Node.js (v22.0 or later) or just run in docker only
 - OpenAI API key - if you plan on using openai
 - Anthropic API key - if you plan on using Claude models
 - Ollama  (OPTIONAL for local model support)
@@ -123,7 +123,11 @@ docker-compose down
 - To change the default Anthropic model, update the `ANTHROPIC_MODEL` variable in your `.env` files.
 - If using `ollama` and your host if different then change in the .env, by default when running nativly using npm run dev it uses locahost:11434 and when running docker it uses host.docker.internal:11434 so no need to change in the .env
 
-![btc.png](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/d9e7a714-c9aa-42d2-e4a8-988f62b07800/public)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/afc1eb69-37d5-4fef-8ed0-c1e00bce4c02" width="350" alt="AI Screen Analyzer">
+  <br>
+  <em>AI Screen Analyzer in action</em>
+</p>
 
 
 ## Contributing
