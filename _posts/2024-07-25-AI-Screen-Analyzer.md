@@ -5,8 +5,7 @@ date: 2024-07-25 05:00:00  -500
 categories: [docker]
 tags: [python,llm,claude,docker,ai,openai,ollama]
 image:
-  path: /assets/images/headers/analyzer.webp
-  alt: AI Screen Analyzer
+  path: https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/8158ad30-d0cd-40c3-f007-4ba87a4df400/public
 ---
 
 
