@@ -12,10 +12,6 @@ image:
 
 ## Unleashing Local Text-to-Speech Power
 
-![Kokoro TTS Magic](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/373c6055-03f6-47cc-9fae-3a89082da500/public)
-
-
-
 In the rapidly evolving landscape of AI voice synthesis, finding a solution that balances quality, speed, and privacy can be challenging. Enter Kokoro FastAPI, an open-source project that has quietly revolutionized locally-hosted text-to-speech (TTS) capabilities. This powerful tool delivers studio-quality voice synthesis without sending your data to external servers, making it a game-changer for developers, content creators, and privacy enthusiasts alike.
 
 ## What Makes Kokoro FastAPI Special?
@@ -25,6 +21,8 @@ Kokoro FastAPI stands out in the crowded TTS space for several compelling reason
 Beyond privacy, Kokoro delivers exceptional voice quality that rivals commercial solutions. The project leverages advanced neural network architectures to produce natural-sounding speech with proper intonation, rhythm, and emotional nuance. Unlike many other local TTS solutions that sound robotic or stilted, Kokoro's output often passes for human speech in casual listening tests.
 
 Performance is another area where Kokoro shines. The FastAPI implementation provides low-latency responses, making it suitable for real-time applications. Whether you're building an accessibility tool, a voice assistant, or generating audio for content, the quick response times keep your workflow smooth and efficient.
+
+![Kokoro TTS Magic](https://imagedelivery.net/WfhVb8dSNAAvdXUdMfBuPQ/373c6055-03f6-47cc-9fae-3a89082da500/public)
 
 ## Getting Started with Kokoro FastAPI
 
@@ -66,6 +64,8 @@ While Kokoro FastAPI delivers impressive results, it's important to consider the
 For basic usage and testing, a modern CPU with at least 4 cores and 8GB of RAM should suffice. However, for production deployments or faster synthesis, a system with a dedicated GPU will significantly improve performance. The project supports CUDA acceleration for NVIDIA GPUs, which can reduce synthesis time by an order of magnitude.
 
 Storage requirements vary based on the number of voice models you install, but plan for at least 2-5GB per model. The Docker implementation helps manage these dependencies efficiently, but be mindful of resource allocation when deploying in constrained environments.
+
+I have added a feature to use it in my Voice Chat Ai app [https://github.com/bigsk1/voice-chat-ai](https://github.com/bigsk1/voice-chat-ai)
 
 ## Community and Future Development
 
