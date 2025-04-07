@@ -171,7 +171,6 @@ To run the backend API and the frontend UI, follow these steps:
 
 This will start the backend API on port 8001 and the frontend UI on port 3000.
 
- If you need a complete solution - crawl4ai with or without a local Supabase all in Docker see [Docker Deployment](#docker-deployment) section of the README
 
  ---
 
@@ -638,7 +637,7 @@ clear preferences
 ```
 Deletes all preferences for the current user after confirmation.
 
-**Important**: Preference commands are only available when a user ID is provided (using `--user` when starting the chat). For more detailed information about the user preference system, see the [preferences documentation](docs/preferences.md).
+**Important**: Preference commands are only available when a user ID is provided (using `--user` when starting the chat).
 </details>
 
 ### Chat Profiles
@@ -1195,7 +1194,6 @@ To use the full stack Docker setup:
 
 </details>
 
-For more detailed instructions, see the [Docker README](docker/full-stack/README.md) and [System Flows Documentation](docs/SYSTEM_FLOWS.md).
 
 ## API
 
