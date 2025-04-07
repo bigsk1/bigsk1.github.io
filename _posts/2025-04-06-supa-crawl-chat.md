@@ -63,13 +63,15 @@ Seamlessly crawl websites, transform content into vector embeddings, and enable 
 ## Installation
 
 1. Clone this repository:
-   ```
+
+   ```bash
    git clone https://github.com/bigsk1/supa-crawl-chat.git
    cd supa-crawl-chat
    ```
 
 2. Install the required dependencies:
-   ```
+
+   ```bash
    pip install -r requirements.txt
    ```
 
@@ -153,19 +155,22 @@ To run the backend API and the frontend UI, follow these steps:
 
 1. **Start the Backend API**:
    Open a terminal and navigate to the root directory of the project. Then run:
+
    ```bash
    python run_api.py
    ```
 
 2. **Start the Frontend UI**:
    Open a separate terminal, navigate to the `frontend` directory, and run:
+
    ```bash
    npm run dev
    ```
 
 3. **Access the Web UI**:
    Open your web browser and go to:
-   ```
+
+   ```bash
    http://localhost:3000/
    ```
 
@@ -176,41 +181,6 @@ This will start the backend API on port 8001 and the frontend UI on port 3000.
 
 ![Image](https://github.com/user-attachments/assets/a56cf708-dfe5-4aa7-a854-0685867cee18)
 
-<details open>
-<summary>Click to close or open images</summary>
-
-- Crawl a url or sitemap
-![Image](https://github.com/user-attachments/assets/9155d59e-303e-484f-96de-1a7a917eeefe)
----
-
-- Chat with your docs!
-![Image](https://github.com/user-attachments/assets/86b26bf1-15e9-4cc9-9cba-6a666c2d0646)
----
-
-- Manage your sites
-![Image](https://github.com/user-attachments/assets/f106ebd6-96a8-448d-b871-eaa9038169f9)
----
-
-- Search your crawled pages - view chunks
-![Image](https://github.com/user-attachments/assets/6b0defc7-d0c9-405b-bbf4-1c8045e6f206)
----
-
-- View your sites - parent pages and chunks
-![Image](https://github.com/user-attachments/assets/4c1a0b52-953e-4dc8-b7a9-4a62ecb56c93)
----
-
-- Get detailed info - view whats in the db, view raw, render in md or fetch url live!
-![Image](https://github.com/user-attachments/assets/4042e241-23ca-4009-b629-a362dac74f7a)
----
-
-- As you chat the AI will add preferences based on your conversation and remeber them or you can add manually
-![Image](https://github.com/user-attachments/assets/5836dfa8-3b09-406e-a5d9-392114d07b99)
----
-
-- Dedicated User Guide
-![Image](https://github.com/user-attachments/assets/b6e00fb5-e55a-4f8a-8019-16a73ce347df)
-
-</details>
 
 
 
@@ -218,8 +188,10 @@ This will start the backend API on port 8001 and the frontend UI on port 3000.
 
 The project supports two ways to connect to your Supabase database:
 
-1. **Single URL** (Option 1): Use this for both local and remote connections. The URL can be specified with or without protocol.
-   ```
+1. **Single URL** (Option 1):
+ Use this for both local and remote connections. The URL can be specified with or without protocol.
+
+   ```bash
    # With protocol (for remote instances)
    SUPABASE_URL=https://your-project.supabase.co:5432
    
@@ -241,13 +213,17 @@ You'll need to provide the database credentials:
 <summary>Click to expand</summary>
 The system automatically breaks down large content into smaller, more manageable chunks for better LLM interaction and more precise search results. This provides several benefits:
 
-1. **Improved Search Precision**: Instead of matching against entire pages, the system can find the specific chunk that best answers a query.
+1. **Improved Search Precision**:
+ Instead of matching against entire pages, the system can find the specific chunk that best answers a query.
 
-2. **Efficient Token Usage**: When interacting with LLMs, only the relevant chunks are sent, reducing token usage and costs.
+2. **Efficient Token Usage**:
+ When interacting with LLMs, only the relevant chunks are sent, reducing token usage and costs.
 
-3. **Better Context Management**: Each chunk maintains a reference to its parent page, preserving the full context.
+3. **Better Context Management**:
+ Each chunk maintains a reference to its parent page, preserving the full context.
 
-4. **Automatic Token Limit Handling**: Content is automatically chunked to stay within the token limits of the embedding model (8,192 tokens for text-embedding-3-small).
+4. **Automatic Token Limit Handling**:
+ Content is automatically chunked to stay within the token limits of the embedding model (8,192 tokens for text-embedding-3-small).
 </details>
 
 ### How Chunking Works
@@ -257,23 +233,31 @@ The system automatically breaks down large content into smaller, more manageable
 
 The system uses a sophisticated semantic chunking strategy:
 
-1. **Semantic Boundary Detection**: Content is first split along natural semantic boundaries:
+1. **Semantic Boundary Detection**:
+ Content is first split along natural semantic boundaries:
+
    - Markdown headers (e.g., `# Section Title`)
    - Paragraph breaks
    - This preserves the meaning and context of each chunk
 
-2. **Token-Based Sizing**: Each section is then analyzed to ensure it fits within token limits:
+2. **Token-Based Sizing**:
+ Each section is then analyzed to ensure it fits within token limits:
+
    - Sections that fit are kept together
    - Sections that exceed limits are further split with token-based chunking
    - A 200-token overlap is maintained between chunks for context continuity
 
-3. **Smart Overlap**: When creating overlaps between chunks, the system looks for natural break points:
+3. **Smart Overlap**:
+ When creating overlaps between chunks, the system looks for natural break points:
+
    - Paragraph breaks
    - Sentence endings
    - Clause breaks
    - Word boundaries
 
-4. **Metadata Preservation**: Each chunk maintains references to:
+4. **Metadata Preservation**:
+ Each chunk maintains references to:
+
    - Its parent document
    - Its position in the sequence (chunk index)
    - Its token count
@@ -294,6 +278,7 @@ enhanced_pages = asyncio.run(self.enhance_pages(pages, max_tokens_per_chunk=4000
 ```
 
 The default settings are:
+
 - `max_tokens_per_chunk`: 4,000 tokens (half of the 8,192 token limit for safety)
 - `overlap_tokens`: 200 tokens (overlap between chunks to maintain context)
 </details>
@@ -303,14 +288,16 @@ The default settings are:
 Before using the crawler, you can test your setup:
 
 1. Test the database connection:
-   ```
-   python tests/test_db_connection.py
-   ```
+
+```bash
+python tests/test_db_connection.py
+```
 
 2. Test the Crawl4AI API:
-   ```
-   python tests/test_crawl_api.py
-   ```
+
+```bash
+python tests/test_crawl_api.py
+```
 
 ## Usage
 
@@ -318,7 +305,7 @@ Before using the crawler, you can test your setup:
 
 Before using the crawler, you need to set up the database:
 
-```
+```bash
 python main.py setup
 ```
 
@@ -331,6 +318,7 @@ This will create the necessary tables and extensions in your Supabase database.
 <summary>Click to expand images of terminal</summary>
 
 ![Image](https://github.com/user-attachments/assets/bd49c8df-4f45-4981-bd29-64fadf29a0e0)
+
 ![Image](https://github.com/user-attachments/assets/c3071ef4-c516-43f9-8496-b49ddc59a55e)
 
 ![Image](https://github.com/user-attachments/assets/7aa1d142-4a70-4d86-a17d-860ab633ae3f)
@@ -346,36 +334,42 @@ This will create the necessary tables and extensions in your Supabase database.
 You can crawl a website in two ways:
 
 1. Using the command-line interface:
-   ```
-   python main.py crawl https://example.com --name "Example Site" --description "An example website"
-   ```
+
+```bash
+python main.py crawl https://example.com --name "Example Site" --description "An example website"
+```
 
    To crawl a sitemap:
-   ```
-   python main.py crawl https://example.com/sitemap.xml --sitemap --name "Example Site"
-   ```
+
+```bash
+python main.py crawl https://example.com/sitemap.xml --sitemap --name "Example Site"
+```
 
    You can limit the number of URLs to crawl from the sitemap:
-   ```
-   python main.py crawl https://example.com/sitemap.xml --sitemap --max-urls 20
-   ```
+
+```bash
+python main.py crawl https://example.com/sitemap.xml --sitemap --max-urls 20
+```
 
    Note: If you don't provide a description, the system will automatically generate one based on the content of the homepage or main page.
 
 2. Using the `.env` file configuration: ( recommended )
    
    First, update the `.env` file with your crawl settings:
-   ```
-   CRAWL_TYPE=url  # or 'sitemap' for sitemap crawling
-   CRAWL_URL=https://example.com
-   CRAWL_SITE_NAME=Example Site
-   CRAWL_SITE_DESCRIPTION=An example website  # Optional - will be auto-generated if empty
-   ```
+
+```env
+CRAWL_TYPE=url  # or 'sitemap' for sitemap crawling
+CRAWL_URL=https://example.com
+CRAWL_SITE_NAME=Example Site
+CRAWL_SITE_DESCRIPTION=An example website  # Optional - will be auto-generated if empty
+```
 
    Then run:
-   ```
-   python run_crawl.py
-   ```
+
+```bash
+python run_crawl.py
+```
+
 </details>
 
 
@@ -383,7 +377,7 @@ You can crawl a website in two ways:
 
 The crawler automatically generates titles and summaries for crawled content using OpenAI. You can configure the model used for this in the `.env` file:
 
-```
+```bash
 OPENAI_CONTENT_MODEL=gpt-4o-mini
 ```
 
@@ -394,7 +388,7 @@ OPENAI_CONTENT_MODEL=gpt-4o-mini
 
 If you have existing pages without titles or summaries, or if you want to regenerate them with a different model, you can use the `update_content.py` script:
 
-```
+```bash
 # Update all sites
 python update_content.py
 
@@ -407,6 +401,7 @@ python update_content.py --limit 50
 # Force update all pages, even if they already have titles and summaries
 python update_content.py --force
 ```
+
 </details>
 
 ### Searching the crawled content
@@ -416,13 +411,13 @@ python update_content.py --force
 
 To search the crawled content using semantic search:
 
-```
+```bash
 python main.py search "your search query"
 ```
 
 To use text-based search instead of semantic search:
 
-```
+```bash
 python main.py search "your search query" --text-only
 ```
 
@@ -430,22 +425,23 @@ python main.py search "your search query" --text-only
 
 To adjust the similarity threshold and limit the number of results:
 
-```
+```bash
 python main.py search "your search query" --threshold 0.8 --limit 2
 ```
 
 To save the search results to a file:
 
-```
+```bash
 python main.py search "your search query" --output results.json
 ```
+
 </details>
 
 ### Listing crawled sites
 
 To list all the sites that have been crawled:
 
-```
+```bash
 python main.py list-sites
 ```
 
@@ -453,7 +449,7 @@ python main.py list-sites
 
 By default, this only counts parent pages (not chunks). To include chunks in the page count:
 
-```
+```bash
 python main.py list-sites --include-chunks
 ```
 
@@ -474,7 +470,7 @@ pages_with_chunks = crawler.get_site_pages(site_id, limit=100, include_chunks=Tr
 
 When searching, chunks are automatically included and prioritized for more precise results. Each chunk includes context about its parent document:
 
-```
+```python
 python main.py search "your search query"
 ```
 
@@ -484,9 +480,11 @@ The search results will include:
 - Which part of the document it represents (e.g., "Part 2 of 5")
 
 This makes it easier to understand the context of each search result, even when it's a small chunk of a larger document.
+
 </details>
 
 ---
+
 ### Using the chat interface in terminal
 
 ![Image](https://github.com/user-attachments/assets/34d79a96-2d60-4221-a1f7-3a8582129855)
@@ -533,6 +531,7 @@ python main.py chat --verbose
 # Combined
 python main.py chat --model gpt-4 --limit 15 --threshold 0.3 --session 12123111111 --user John --verbose
 ```
+
 </details>
 
 #### Search Functionality
@@ -542,9 +541,15 @@ python main.py chat --model gpt-4 --limit 15 --threshold 0.3 --session 121231111
 
 The chat interface uses a sophisticated hybrid search approach that combines vector similarity with text matching:
 
-1. **Vector Search**: Uses OpenAI's embeddings to find semantically similar content
-2. **Text Search**: Enhances results with keyword matching for better precision
-3. **Hybrid Approach**: Combines both methods to provide the most relevant results
+1. **Vector Search**:
+ Uses OpenAI's embeddings to find semantically similar content
+
+2. **Text Search**:
+ Enhances results with keyword matching for better precision
+
+3. **Hybrid Approach**:
+ Combines both methods to provide the most relevant results
+
 
 This approach ensures that even when vector similarity might not find exact matches, the text search component can still retrieve relevant information. The system automatically adjusts the search strategy based on the query type and available content.
 </details>
@@ -557,15 +562,22 @@ This approach ensures that even when vector similarity might not find exact matc
 The chat interface stores all conversation history in the database, allowing the LLM to remember previous interactions. This enables more natural and contextual conversations over time.
 
 Key features:
-- **Session-based conversations**: Each conversation gets a unique session ID
-- **User identification**: Optionally associate conversations with specific users
-- **Conversation continuity**: Continue conversations where you left off, even after restarting
+- **Session-based conversations**:
+ Each conversation gets a unique session ID
+
+- **User identification**:
+ Optionally associate conversations with specific users
+
+- **Conversation continuity**:
+ Continue conversations where you left off, even after restarting
+
 - **Chat commands**:
   - Type `clear` to clear the conversation history
   - Type `history` to view the conversation history
   - Type `exit` or `bye` or `exit` to quit the chat interface
 
-**Important**: To maintain the same conversation across multiple chat sessions, you must use the same session ID. The session ID is displayed when you start the chat interface. You can specify it before starting a new chat session:
+**Important**:
+ To maintain the same conversation across multiple chat sessions, you must use the same session ID. The session ID is displayed when you start the chat interface. You can specify it before starting a new chat session:
 
 ```bash
 # Start a new chat session
@@ -578,7 +590,7 @@ python chat.py --user Joe --session a24b6b72-e526-4a09-b662-0f85e82f78a7
 
 You can also set a default session ID in your `.env` file:
 
-```
+```bash
 CHAT_SESSION_ID=your-session-id
 ```
 
@@ -607,37 +619,48 @@ To get the most out of this feature, always use the same session ID and user ID 
 The chat interface includes several commands for managing user preferences directly from the command line:
 
 **Viewing Preferences**
-```
+
+```bash
 preferences
 ```
+
 Displays a table of all active preferences for the current user, including ID, type, value, confidence, context, and last used timestamp.
 
 **Adding Preferences**
-```
+
+```bash
 add preference <type> <value> [confidence]
 ```
+
 Manually adds a new preference for the current user. If confidence is not specified, it defaults to 0.9.
 
 Examples:
-```
+
+```bash
 add preference like Python
 add preference expertise JavaScript 0.85
 add preference goal "Learn machine learning"
 ```
 
 **Deleting Preferences**
-```
+
+```bash
 delete preference <id>
 ```
+
 Deletes a specific preference by ID.
 
 **Clearing All Preferences**
-```
+
+```bash
 clear preferences
 ```
+
 Deletes all preferences for the current user after confirmation.
 
-**Important**: Preference commands are only available when a user ID is provided (using `--user` when starting the chat).
+**Important**: 
+Preference commands are only available when a user ID is provided (using `--user` when starting the chat).
+
 </details>
 
 ### Chat Profiles
@@ -648,26 +671,37 @@ Deletes all preferences for the current user after confirmation.
 The chat interface supports different profiles that customize the behavior of the assistant. Each profile has its own system prompt, search settings, and site filtering capabilities. So ideally crawl the sitemap for a doc site and then use or create a profile with an additional system prompt to be an expert about those docs.
 
 Built-in profiles:
-- **default**: General-purpose assistant that searches all sites
-- **pydantic**: Specialized for Pydantic documentation, focusing on technical details and code examples
-- **technical**: Provides detailed technical explanations with step-by-step instructions
-- **concise**: Gives brief, to-the-point answers without unnecessary details
+- **default**:
+ General-purpose assistant that searches all sites
+
+- **pydantic**:
+ Specialized for Pydantic documentation, focusing on technical details and code examples
+
+- **technical**: 
+Provides detailed technical explanations with step-by-step instructions
+
+- **concise**:
+ Gives brief, to-the-point answers without unnecessary details
 
 
 You can switch profiles during a chat session:
-```
+
+```bash
 profile pydantic
 ```
 
 Or start with a specific profile:
+
 ```bash
 python main.py chat --profile technical
 ```
 
 You can also view all available profiles:
-```
+
+```bash
 profiles
 ```
+
 </details>
 
 #### How Site Filtering Works
@@ -686,10 +720,17 @@ search_settings:
 
 Here's how the filtering works:
 
-1. **Empty array (`sites: []`)**: Searches across ALL sites in the database
-2. **Site patterns**: Filters to only include sites where the site name contains any of the specified patterns
-3. **Pattern matching**: Uses case-insensitive partial matching, so `"bigsk1"` would match site names like "Bigsk1 Com", "bigsk1.com", etc.
-4. **Multiple patterns**: You can include multiple patterns to search across several related sites
+1. **Empty array (`sites: []`)**:
+ Searches across ALL sites in the database
+
+2. **Site patterns**: 
+Filters to only include sites where the site name contains any of the specified patterns
+
+3. **Pattern matching**:
+ Uses case-insensitive partial matching, so `"bigsk1"` would match site names like "Bigsk1 Com", "bigsk1.com", etc.
+
+4. **Multiple patterns**: 
+You can include multiple patterns to search across several related sites
 
 The filtering process:
 - When a user asks a question, the system looks at the current profile's `sites` setting
@@ -699,7 +740,8 @@ The filtering process:
 </details>
 
 You can switch profiles during a chat session:
-```
+
+```bash
 profile pydantic
 ```
 
@@ -709,7 +751,8 @@ python main.py chat --profile technical
 ```
 
 You can also view all available profiles:
-```
+
+```bash
 profiles
 ```
 
@@ -729,6 +772,7 @@ You can create your own custom profiles by adding YAML files to the `profiles` d
   - `limit`: Maximum number of results to return
 
 Example profile file (`profiles/custom_expert.yaml`):
+
 ```yaml
 name: custom_expert
 description: Custom expert for specific documentation
@@ -752,9 +796,11 @@ search_settings:
 ```
 
 You can specify a custom profiles directory:
+
 ```bash
 python main.py chat --profiles-dir my_profiles
 ```
+
 </details>
 
 #### Configuration via .env
@@ -764,7 +810,7 @@ python main.py chat --profiles-dir my_profiles
 
 You can set default values for the chat interface in your `.env` file:
 
-```
+```bash
 # Chat Configuration
 CHAT_MODEL=gpt-4o
 CHAT_RESULT_LIMIT=5
@@ -785,7 +831,7 @@ This allows you to maintain consistent settings and continue the same conversati
 <summary>Click to expand Resetting the database</summary>
 If you want to start fresh and delete all data or recreate the tables, you can use the `reset_database.py` script:
 
-```
+```bash
 python tests/reset_database.py
 ```
 
@@ -898,6 +944,7 @@ You can also use the crawler programmatically in your own Python code. See `test
   - `package.json`: NPM dependencies and scripts
 
 ---
+
 </details>
 
 ## Database Structure
@@ -955,11 +1002,21 @@ The project includes a powerful Streamlit-based Supabase Explorer app that allow
 
 ### Features
 
-- **Interactive Query Interface**: Run predefined or custom SQL queries with a single click
-- **Data Visualization**: Create bar charts, line charts, and pie charts from your query results
-- **Database Overview**: View statistics about your database, including site counts and page distribution
-- **Export Functionality**: Download query results as CSV files for further analysis
-- **Predefined Queries**: Access a comprehensive collection of useful SQL queries organized by category:
+- **Interactive Query Interface**:
+ Run predefined or custom SQL queries with a single click
+
+- **Data Visualization**:
+ Create bar charts, line charts, and pie charts from your query results
+
+- **Database Overview**:
+ View statistics about your database, including site counts and page distribution
+
+- **Export Functionality**:
+ Download query results as CSV files for further analysis
+
+- **Predefined Queries**:
+ Access a comprehensive collection of useful SQL queries organized by category:
+
   - Site queries
   - Page queries
   - Chunk queries
@@ -988,7 +1045,7 @@ The app will automatically connect to your Supabase database using the credentia
 
 The Supabase Explorer is also available as part of the Docker setup. When you run either of the Docker Compose configurations, the Streamlit app will be accessible at:
 
-```
+```bash
 http://localhost:8501
 ```
 
@@ -1044,6 +1101,7 @@ docker-compose -f docker/docker-compose.yml logs -f
 ```
 
 This setup includes:
+
 - API backend on port 8001
 - Frontend UI on port 3000
 - Streamlit Explorer on port 8501
@@ -1104,31 +1162,37 @@ This setup comes with everything you need to run the complete application withou
 
 The full-stack Docker setup requires careful configuration of environment variables:
 
-1. **SUPABASE_URL**: This should be commented out or left empty to ensure the API connects directly to the database:
-   ```
-   # SUPABASE_URL=http://kong:8002
-   ```
+1. **SUPABASE_URL**: 
+This should be commented out or left empty to ensure the API connects directly to the database:
+
+```bash
+# SUPABASE_URL=http://kong:8002
+```
    
    If this is set, the API will try to connect to Kong for database operations, which will cause SSL negotiation errors.
 
-2. **Direct Database Connection**: Ensure these database connection parameters are set correctly:
-   ```
-   SUPABASE_HOST=db
-   SUPABASE_PORT=5432
-   SUPABASE_KEY=supabase_admin
-   SUPABASE_PASSWORD=${POSTGRES_PASSWORD}
-   ```
+2. **Direct Database Connection**:
+ Ensure these database connection parameters are set correctly:
+
+```bash
+SUPABASE_HOST=db
+SUPABASE_PORT=5432
+SUPABASE_KEY=supabase_admin
+SUPABASE_PASSWORD=${POSTGRES_PASSWORD}
+```
 
 #### Setting Up the Full Stack
 
 To use the full stack Docker setup:
 
 1. Navigate to the docker directory:
+
    ```bash
    cd docker
    ```
 
 2. Run the setup script to create necessary configuration files:
+
    ```bash
    chmod +x setup_update.sh
    ./setup_update.sh
@@ -1142,16 +1206,19 @@ To use the full stack Docker setup:
    - Generate the Kong configuration file
 
 3. Edit the Docker-specific `.env` file with your actual values:
+
    ```bash
    nano .env
    ```
 
 4. Start the services:
+
    ```bash
    docker-compose -f full-stack-compose.yml up -d
    ```
 
 5. Access the services:
+
    - API: http://localhost:8001
    - API Documentation: http://localhost:8001/docs
    - Frontend UI: http://localhost:3000
@@ -1160,6 +1227,7 @@ To use the full stack Docker setup:
    - Crawl4AI: http://localhost:11235
 
 6. Monitor or manage the stack:
+
    ```bash
    # Check status of all services
    ./status.sh
@@ -1174,18 +1242,21 @@ To use the full stack Docker setup:
    - If you see SSL negotiation errors, make sure `SUPABASE_URL` is commented out or empty in your `.env` file
    - Verify the database credentials in the `.env` file
    - Restart the API service after making changes:
+
      ```bash
      docker-compose -f full-stack-compose.yml restart api
      ```
 
 2. **REST Service Issues**:
    - If the REST service is not connecting properly, run the fix script:
+
      ```bash
      ./fix_rest.sh
      ```
 
 3. **Checking Logs**:
    - View logs for a specific service:
+
      ```bash
      docker logs supachat-api
      docker logs supachat-kong
@@ -1220,7 +1291,7 @@ The API will be available at `http://localhost:8001`
 
 The interactive API documentation is available at:
 
-```
+```bash
 http://localhost:8001/docs
 ```
 
