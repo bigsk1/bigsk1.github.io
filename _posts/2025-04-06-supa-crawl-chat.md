@@ -87,8 +87,6 @@ Seamlessly crawl websites, transform content into vector embeddings, and enable 
 
 
 4. Create a `.env` file with your configuration:
-<details>
-<summary>Click to expand</summary>
 
 ```env
 # Crawl4AI Configuration
@@ -144,8 +142,6 @@ CHAT_PROFILES_DIR=profiles
 # Verbose mode (true, false) - enable to see more during chat
 CHAT_VERBOSE=false
 ```
-
-</details>
 
 
 ## Running the Frontend and Backend
@@ -209,8 +205,7 @@ You'll need to provide the database credentials:
 
 ### Content Chunking for LLM Interaction
 
-<details>
-<summary>Click to expand</summary>
+
 The system automatically breaks down large content into smaller, more manageable chunks for better LLM interaction and more precise search results. This provides several benefits:
 
 1. **Improved Search Precision**:
@@ -224,12 +219,10 @@ The system automatically breaks down large content into smaller, more manageable
 
 4. **Automatic Token Limit Handling**:
  Content is automatically chunked to stay within the token limits of the embedding model (8,192 tokens for text-embedding-3-small).
-</details>
+
 
 ### How Chunking Works
 
-<details>
-<summary>Click to expand chunking details</summary>
 
 The system uses a sophisticated semantic chunking strategy:
 
@@ -263,12 +256,9 @@ The system uses a sophisticated semantic chunking strategy:
    - Its token count
 
 This approach ensures that chunks are not only sized appropriately for LLMs but also maintain semantic coherence, making them more useful for search and retrieval.
-</details>
 
 ### Configuring Chunking
 
-<details>
-<summary>Click to expand chunking configuration</summary>
 
 You can adjust the chunking parameters in the code:
 
@@ -314,8 +304,6 @@ This will create the necessary tables and extensions in your Supabase database.
 ## Terminal
 
 
-<details>
-<summary>Click to expand images of terminal</summary>
 
 ![Image](https://github.com/user-attachments/assets/bd49c8df-4f45-4981-bd29-64fadf29a0e0)
 
@@ -323,13 +311,10 @@ This will create the necessary tables and extensions in your Supabase database.
 
 ![Image](https://github.com/user-attachments/assets/7aa1d142-4a70-4d86-a17d-860ab633ae3f)
 
-</details>
 
 
 ### Crawling a website with args
 
-<details>
-<summary>Click to expand website crawling options</summary>
 
 You can crawl a website in two ways:
 
@@ -370,7 +355,6 @@ CRAWL_SITE_DESCRIPTION=An example website  # Optional - will be auto-generated i
 python run_crawl.py
 ```
 
-</details>
 
 
 ### Title and Summary Generation
@@ -383,8 +367,6 @@ OPENAI_CONTENT_MODEL=gpt-4o-mini
 
 #### Updating Existing Content
 
-<details>
-<summary>Click to expand content updating options</summary>
 
 If you have existing pages without titles or summaries, or if you want to regenerate them with a different model, you can use the `update_content.py` script:
 
@@ -402,12 +384,8 @@ python update_content.py --limit 50
 python update_content.py --force
 ```
 
-</details>
-
 ### Searching the crawled content
 
-<details>
-<summary>Click to expand search options</summary>
 
 To search the crawled content using semantic search:
 
@@ -435,7 +413,6 @@ To save the search results to a file:
 python main.py search "your search query" --output results.json
 ```
 
-</details>
 
 ### Listing crawled sites
 
@@ -455,8 +432,6 @@ python main.py list-sites --include-chunks
 
 ### Working with Chunks
 
-<details>
-<summary>Click to expand details on working with chunks</summary>
 
 When retrieving or searching content, you can control whether chunks are included:
 
@@ -481,7 +456,6 @@ The search results will include:
 
 This makes it easier to understand the context of each search result, even when it's a small chunk of a larger document.
 
-</details>
 
 ---
 
@@ -504,8 +478,6 @@ python main.py chat
 
 #### Chat Interface Options
 
-<details>
-<summary>Click to expand chat interface options</summary>
 
 You can customize the chat interface with various options:
 
@@ -532,12 +504,9 @@ python main.py chat --verbose
 python main.py chat --model gpt-4 --limit 15 --threshold 0.3 --session 12123111111 --user John --verbose
 ```
 
-</details>
 
 #### Search Functionality
 
-<details>
-<summary>Click to expand search functionality details</summary>
 
 The chat interface uses a sophisticated hybrid search approach that combines vector similarity with text matching:
 
@@ -552,12 +521,9 @@ The chat interface uses a sophisticated hybrid search approach that combines vec
 
 
 This approach ensures that even when vector similarity might not find exact matches, the text search component can still retrieve relevant information. The system automatically adjusts the search strategy based on the query type and available content.
-</details>
 
 #### Persistent Conversation History
 
-<details>
-<summary>Click to expand conversation history details</summary>
 
 The chat interface stores all conversation history in the database, allowing the LLM to remember previous interactions. This enables more natural and contextual conversations over time.
 
@@ -595,12 +561,9 @@ CHAT_SESSION_ID=your-session-id
 ```
 
 This way, the chat interface will always use the same session ID unless you explicitly specify a different one with the `--session` parameter.
-</details>
 
 #### User Preferences and Memory
 
-<details>
-<summary>Click to expand user preferences and memory details</summary>
 
 The chat interface can remember user preferences and information shared during conversations, as long as you use the same session ID. For example:
 - If you tell the assistant "I like Corvettes" in one session
@@ -661,12 +624,9 @@ Deletes all preferences for the current user after confirmation.
 **Important**: 
 Preference commands are only available when a user ID is provided (using `--user` when starting the chat).
 
-</details>
 
 ### Chat Profiles
 
-<details>
-<summary>Click to expand chat profiles details</summary>
 
 The chat interface supports different profiles that customize the behavior of the assistant. Each profile has its own system prompt, search settings, and site filtering capabilities. So ideally crawl the sitemap for a doc site and then use or create a profile with an additional system prompt to be an expert about those docs.
 
@@ -702,12 +662,9 @@ You can also view all available profiles:
 profiles
 ```
 
-</details>
 
 #### How Site Filtering Works
 
-<details>
-<summary>Click to expand site filtering details</summary>
 
 The `sites` array in each profile's `search_settings` controls which sites the assistant searches through when answering questions:
 
@@ -737,7 +694,6 @@ The filtering process:
 - It queries the `crawl_sites` table to find site IDs where the name contains any of the patterns
 - It then only searches for content in pages associated with those site IDs
 - This allows profiles to focus on specific content sources, making responses more relevant
-</details>
 
 You can switch profiles during a chat session:
 
@@ -758,8 +714,6 @@ profiles
 
 #### Custom Profiles
 
-<details>
-<summary>Click to expand custom profiles details</summary>
 
 You can create your own custom profiles by adding YAML files to the `profiles` directory. Each profile file should include:
 
@@ -801,12 +755,9 @@ You can specify a custom profiles directory:
 python main.py chat --profiles-dir my_profiles
 ```
 
-</details>
 
 #### Configuration via .env
 
-<details>
-<summary>Click to expand .env configuration details</summary>
 
 You can set default values for the chat interface in your `.env` file:
 
@@ -823,12 +774,9 @@ CHAT_VERBOSE=false
 ```
 
 This allows you to maintain consistent settings and continue the same conversation across multiple sessions.
-</details>
 
 ### Resetting the database
 
-<details>
-<summary>Click to expand Resetting the database</summary>
 If you want to start fresh and delete all data or recreate the tables, you can use the `reset_database.py` script:
 
 ```bash
@@ -838,7 +786,6 @@ python tests/reset_database.py
 This script provides two options:
 1. Delete all data (keep tables) - This will delete all data from the tables but keep the table structure.
 2. Drop and recreate tables - This will drop the tables and recreate them, effectively starting from scratch.
-</details>
 
 ### Programmatic usage
 
@@ -846,8 +793,6 @@ You can also use the crawler programmatically in your own Python code. See `test
 
 ## Project Structure
 
-<details>
-<summary>Click to expand Project Structure</summary>
 
 ### Backend
 
@@ -945,12 +890,11 @@ You can also use the crawler programmatically in your own Python code. See `test
 
 ---
 
-</details>
+
 
 ## Database Structure
 
-<details>
-<summary>Click to expand Database Structure</summary>
+
 
 ![Image](https://github.com/user-attachments/assets/629345d4-3dea-489b-be0e-65cb07f53d9a)
 
@@ -989,7 +933,6 @@ The project uses the following tables in the Supabase database:
    - `metadata`: Additional metadata about the message
 
 When you crawl a site multiple times, the system will update existing pages rather than creating duplicates, ensuring you always have the most recent content. Similarly, the chat interface will maintain conversation history across sessions, allowing for more natural and contextual interactions.
-</details>
 
 ## Supabase Explorer
 
@@ -1061,8 +1004,6 @@ docker-compose -f docker/crawl4ai-docker-compose.yml up -d
 
 ### Adding Custom Queries
 
-<details>
-<summary>Click to expand Adding Custom Queries</summary>
 
 You can add your own custom queries to the predefined list by editing the `supabase_explorer/supabase_queries.md` file. Follow the existing format:
 
@@ -1077,7 +1018,7 @@ SELECT * FROM your_table WHERE your_condition;
 
 
 After adding your queries, restart the Streamlit app to load the new queries.
-</details>
+
 
 
 
@@ -1155,8 +1096,6 @@ We provide a comprehensive Docker setup that includes everything you need to run
 
 This setup comes with everything you need to run the complete application without any external dependencies.
 
-<details>
-<summary>Click to expand more images of the UI</summary>
 
 #### Important Environment Variable Configuration
 
@@ -1263,7 +1202,6 @@ To use the full stack Docker setup:
      docker logs supachat-frontend
      ```
 
-</details>
 
 
 ## API
@@ -1297,8 +1235,6 @@ http://localhost:8001/docs
 
 The API provides the following endpoints:
 
-<details>
-<summary>Click to expand APi Endpoints</summary>
 
 #### Search
 
@@ -1371,7 +1307,6 @@ The API provides the following endpoints:
   - Parameters:
     - `session_id`: Session ID
     - `user_id`: Optional user ID
-</details>
 
 ### Example API Usage
 
