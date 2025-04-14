@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MCP: Revolutionizing AI Tools
+title: MCP Revolutionizing AI Tools
 date: 2025-04-14 03:45:36 -500
 categories: [ai, technology]
 tags: [mcp, ai-tools, llm-functionality]
