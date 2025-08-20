@@ -26,7 +26,7 @@ Autogen uses a combination of templates and configuration files to generate the 
 AutoGen requires **Python version >= 3.8**. It can be installed from pip:
 
 ```bash
-pip install pyautogen
+pip install ag2
 ```
 
 Minimal dependencies are installed without extra options. You can install extra options based on the feature you need.
