@@ -1,0 +1,6 @@
+{% if page.image.hide_caption == true %}
+  <style>
+    /* Chirpy also displays image alt text as a cover caption. */
+    header .preview-img + figcaption { display: none; }
+  </style>
+{% endif %}
