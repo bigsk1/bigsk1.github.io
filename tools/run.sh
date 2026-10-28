@@ -1,54 +1,30 @@
 #!/usr/bin/env bash
-#
-# Run jekyll serve and then launch the site
-
-prod=false
-command="bundle exec jekyll s -l"
-host="127.0.0.1"
-
+set -euo pipefail
 help() {
-  echo "Usage:"
-  echo
-  echo "   bash /path/to/run [options]"
-  echo
-  echo "Options:"
-  echo "     -H, --host [HOST]    Host to bind to."
-  echo "     -p, --production     Run Jekyll in 'production' mode."
-  echo "     -h, --help           Print this help information."
+  echo 'Usage: bash tools/run.sh [--drafts] [-H HOST] [--port PORT] [-p]'
+  echo 'Defaults: http://127.0.0.1:4000, development, published posts only.'
+  echo '--drafts also previews published:false content. Keep the server local.'
 }
-
+host=127.0.0.1
+port=4000
+mode=development
+extra=()
 while (($#)); do
-  opt="$1"
-  case $opt in
-  -H | --host)
-    host="$2"
-    shift 2
-    ;;
-  -p | --production)
-    prod=true
-    shift
-    ;;
-  -h | --help)
-    help
-    exit 0
-    ;;
-  *)
-    echo -e "> Unknown option: '$opt'\n"
-    help
-    exit 1
-    ;;
+  case "$1" in
+    --drafts) extra+=(--drafts --unpublished); shift ;;
+    -H|--host|--port)
+      [[ $# -ge 2 && -n "$2" && "$2" != -* ]] || { help >&2; exit 1; }
+      if [[ "$1" == --port ]]; then port="$2"; else host="$2"; fi
+      shift 2 ;;
+    -p|--production) mode=production; shift ;;
+    -h|--help) help; exit 0 ;;
+    *) help >&2; exit 1 ;;
   esac
 done
-
-command="$command -H $host"
-
-if $prod; then
-  command="JEKYLL_ENV=production $command"
-fi
-
-if [ -e /proc/1/cgroup ] && grep -q docker /proc/1/cgroup; then
-  command="$command --force_polling"
-fi
-
-echo -e "\n> $command\n"
-eval "$command"
+[[ "$port" =~ ^[0-9]{1,5}$ ]] && ((10#$port > 0 && 10#$port < 65536)) || {
+  echo 'Port must be between 1 and 65535.' >&2; exit 1;
+}
+source "$(dirname -- "${BASH_SOURCE[0]}")/env.sh"
+export JEKYLL_ENV="$mode"
+exec bundle exec jekyll serve --livereload --host "$host" --port "$port" \
+  --destination _site-preview "${extra[@]}"

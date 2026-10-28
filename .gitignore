@@ -1,12 +1,12 @@
 # Bundler cache
 .bundle
 vendor
-Gemfile.lock
 
 # Jekyll cache
 .jekyll-cache
 .jekyll-metadata
 _site
+_site-preview
 
 # RubyGems
 *.gem
@@ -34,3 +34,13 @@ _templates/*
 CONTRIBUTING.md
 
 auto-run/*
+
+# Local authoring instructions, research, generated originals, and secrets
+/personal/
+/AGENTS.md
+/.env
+/.env.*
+/.mise.local.toml
+
+# Windows download-origin metadata copied onto the Linux filesystem
+*:Zone.Identifier*
